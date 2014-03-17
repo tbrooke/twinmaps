@@ -1,0 +1,1022 @@
+<!DOCTYPE html> 
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=8"/>  -->
+  
+  <!-- jquery library -->
+<script type="text/javascript" src="http://use.typekit.com/bjs8nfo.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="webvanta/js/jquery/1.4/jquery-1.4.2.min.js" type="text/javascript"></script>
+<!-- jquery form plugin required for ajax form submission script -->
+<script src="webvanta/js/jquery/1.4/plugins/form/jquery.form.js" type="text/javascript"></script>
+<!-- webvanta code for processing of comment submissions -->
+<script src="form.js" type="text/javascript"></script>
+<!-- jquery validation plugin required for form validation -->
+<script src="webvanta/js/jquery/1.4/plugins/validate/jquery.validate.min.js" type="text/javascript"></script> 
+<!-- png transparency fix for IE; delete this if not using pngs or if you don't care about IE6 -->
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/pngfix/jquery.pngFix.pack.js"></script> 
+<!-- support for treeview navigator-->
+<script  type="text/javascript"  src="webvanta/js/jquery/1.3/plugins/jquery-treeview/jquery.treeview.js"></script>
+<!-- superfish drop-down menu -->
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/hoverIntent.js"></script>
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/superfish.js"></script>
+<!-- initialize Superfish and pngfix-->
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $('ul.sf-menu').superfish({
+          autoArrows:  false,                // disable generation of arrow mark-up
+          dropShadows: true
+        });
+        $(document).pngFix();                // delete if not using transparent pngs or if you don't care about IE6
+    });
+ 
+</script>
+  <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8" />
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css' /> 
+
+<!-- to replace the favicon change the href below to point to one of your own images -->
+<link rel="shortcut icon" type="image/x-icon" href="webvanta/img/favicon.ico" />
+<title>Sites Visited</title>    <!-- title tag pulled from CMS -->
+<meta name="description" content="" /><meta name="keywords" content="Sites" />                         <!-- keyword and description from CMS -->
+
+
+<!-- autodiscovery link for the RSS feed  -->
+
+  <!-- for all other pages, use the feed for everything but posts -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="feed.xml.rss" />
+
+
+<link rel="stylesheet" href="webvanta/css/blueprint/0.9.1/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="webvanta/css/blueprint/0.9.1/print.css" type="text/css" media="print" />  
+
+<!-- IE Links -->
+
+
+
+ 
+
+<link rel='stylesheet' type='text/css' href='earthlingtwo.css' media='all' />
+
+<link rel='stylesheet' type='text/css' href='dropdown_menu.css' media='all' />
+
+<link  rel='stylesheet'  type='text/css' href='treenav.css' media='all' />
+
+ 
+ 
+    <!-- page-specific CSS -->
+ 
+  <script  type="text/javascript">
+  /* SWFObject v2.1 <http://code.google.com/p/swfobject/>
+ Copyright (c) 2007-2008 Geoff Stearns, Michael Williams, and Bobby van der Sluis
+ This software is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+ */
+var swfobject = function() {
+    var b = "undefined",Q = "object",n = "Shockwave Flash",p = "ShockwaveFlash.ShockwaveFlash",P = "application/x-shockwave-flash",m = "SWFObjectExprInst",j = window,K = document,T = navigator,o = [],N = [],i = [],d = [],J,Z = null,M = null,l = null,e = false,A = false;
+    var h = function() {
+        var v = typeof K.getElementById != b && typeof K.getElementsByTagName != b && typeof K.createElement != b,AC = [0,0,0],x = null;
+        if (typeof T.plugins != b && typeof T.plugins[n] == Q) {
+            x = T.plugins[n].description;
+            if (x && !(typeof T.mimeTypes != b && T.mimeTypes[P] && !T.mimeTypes[P].enabledPlugin)) {
+                x = x.replace(/^.*\s+(\S+\s+\S+$)/, "$1");
+                AC[0] = parseInt(x.replace(/^(.*)\..*$/, "$1"), 10);
+                AC[1] = parseInt(x.replace(/^.*\.(.*)\s.*$/, "$1"), 10);
+                AC[2] = /r/.test(x) ? parseInt(x.replace(/^.*r(.*)$/, "$1"), 10) : 0
+            }
+        } else {
+            if (typeof j.ActiveXObject != b) {
+                var y = null,AB = false;
+                try {
+                    y = new ActiveXObject(p + ".7")
+                } catch(t) {
+                    try {
+                        y = new ActiveXObject(p + ".6");
+                        AC = [6,0,21];
+                        y.AllowScriptAccess = "always"
+                    } catch(t) {
+                        if (AC[0] == 6) {
+                            AB = true
+                        }
+                    }
+                    if (!AB) {
+                        try {
+                            y = new ActiveXObject(p)
+                        } catch(t) {
+                        }
+                    }
+                }
+                if (!AB && y) {
+                    try {
+                        x = y.GetVariable("$version");
+                        if (x) {
+                            x = x.split(" ")[1].split(",");
+                            AC = [parseInt(x[0], 10),parseInt(x[1], 10),parseInt(x[2], 10)]
+                        }
+                    } catch(t) {
+                    }
+                }
+            }
+        }
+        var AD = T.userAgent.toLowerCase(),r = T.platform.toLowerCase(),AA = /webkit/.test(AD) ? parseFloat(AD.replace(/^.*webkit\/(\d+(\.\d+)?).*$/, "$1")) : false,q = false,z = r ? /win/.test(r) : /win/.test(AD),w = r ? /mac/.test(r) : /mac/.test(AD);
+        /*@cc_on q=true;@if(@_win32)z=true;@elif(@_mac)w=true;@end@*/
+        return{w3cdom:v,pv:AC,webkit:AA,ie:q,win:z,mac:w}
+    }();
+    var L = function() {
+        if (!h.w3cdom) {
+            return
+        }
+        f(H);
+        if (h.ie && h.win) {
+            try {
+                K.write("<script id=__ie_ondomload defer=true src=//:><\/script>");
+                J = C("__ie_ondomload");
+                if (J) {
+                    I(J, "onreadystatechange", S)
+                }
+            } catch(q) {
+            }
+        }
+        if (h.webkit && typeof K.readyState != b) {
+            Z = setInterval(function() {
+                if (/loaded|complete/.test(K.readyState)) {
+                    E()
+                }
+            }, 10)
+        }
+        if (typeof K.addEventListener != b) {
+            K.addEventListener("DOMContentLoaded", E, null)
+        }
+        R(E)
+    }();
+
+    function S() {
+        if (J.readyState == "complete") {
+            J.parentNode.removeChild(J);
+            E()
+        }
+    }
+
+    function E() {
+        if (e) {
+            return
+        }
+        if (h.ie && h.win) {
+            var v = a("span");
+            try {
+                var u = K.getElementsByTagName("body")[0].appendChild(v);
+                u.parentNode.removeChild(u)
+            } catch(w) {
+                return
+            }
+        }
+        e = true;
+        if (Z) {
+            clearInterval(Z);
+            Z = null
+        }
+        var q = o.length;
+        for (var r = 0; r < q; r++) {
+            o[r]()
+        }
+    }
+
+    function f(q) {
+        if (e) {
+            q()
+        } else {
+            o[o.length] = q
+        }
+    }
+
+    function R(r) {
+        if (typeof j.addEventListener != b) {
+            j.addEventListener("load", r, false)
+        } else {
+            if (typeof K.addEventListener != b) {
+                K.addEventListener("load", r, false)
+            } else {
+                if (typeof j.attachEvent != b) {
+                    I(j, "onload", r)
+                } else {
+                    if (typeof j.onload == "function") {
+                        var q = j.onload;
+                        j.onload = function() {
+                            q();
+                            r()
+                        }
+                    } else {
+                        j.onload = r
+                    }
+                }
+            }
+        }
+    }
+
+    function H() {
+        var t = N.length;
+        for (var q = 0; q < t; q++) {
+            var u = N[q].id;
+            if (h.pv[0] > 0) {
+                var r = C(u);
+                if (r) {
+                    N[q].width = r.getAttribute("width") ? r.getAttribute("width") : "0";
+                    N[q].height = r.getAttribute("height") ? r.getAttribute("height") : "0";
+                    if (c(N[q].swfVersion)) {
+                        if (h.webkit && h.webkit < 312) {
+                            Y(r)
+                        }
+                        W(u, true)
+                    } else {
+                        if (N[q].expressInstall && !A && c("6.0.65") && (h.win || h.mac)) {
+                            k(N[q])
+                        } else {
+                            O(r)
+                        }
+                    }
+                }
+            } else {
+                W(u, true)
+            }
+        }
+    }
+
+    function Y(t) {
+        var q = t.getElementsByTagName(Q)[0];
+        if (q) {
+            var w = a("embed"),y = q.attributes;
+            if (y) {
+                var v = y.length;
+                for (var u = 0; u < v; u++) {
+                    if (y[u].nodeName == "DATA") {
+                        w.setAttribute("src", y[u].nodeValue)
+                    } else {
+                        w.setAttribute(y[u].nodeName, y[u].nodeValue)
+                    }
+                }
+            }
+            var x = q.childNodes;
+            if (x) {
+                var z = x.length;
+                for (var r = 0; r < z; r++) {
+                    if (x[r].nodeType == 1 && x[r].nodeName == "PARAM") {
+                        w.setAttribute(x[r].getAttribute("name"), x[r].getAttribute("value"))
+                    }
+                }
+            }
+            t.parentNode.replaceChild(w, t)
+        }
+    }
+
+    function k(w) {
+        A = true;
+        var u = C(w.id);
+        if (u) {
+            if (w.altContentId) {
+                var y = C(w.altContentId);
+                if (y) {
+                    M = y;
+                    l = w.altContentId
+                }
+            } else {
+                M = G(u)
+            }
+            if (!(/%$/.test(w.width)) && parseInt(w.width, 10) < 310) {
+                w.width = "310"
+            }
+            if (!(/%$/.test(w.height)) && parseInt(w.height, 10) < 137) {
+                w.height = "137"
+            }
+            K.title = K.title.slice(0, 47) + " - Flash Player Installation";
+            var z = h.ie && h.win ? "ActiveX" : "PlugIn",q = K.title,r = "MMredirectURL=" + j.location + "&MMplayerType=" + z + "&MMdoctitle=" + q,x = w.id;
+            if (h.ie && h.win && u.readyState != 4) {
+                var t = a("div");
+                x += "SWFObjectNew";
+                t.setAttribute("id", x);
+                u.parentNode.insertBefore(t, u);
+                u.style.display = "none";
+                var v = function() {
+                    u.parentNode.removeChild(u)
+                };
+                I(j, "onload", v)
+            }
+            U({data:w.expressInstall,id:m,width:w.width,height:w.height}, {flashvars:r}, x)
+        }
+    }
+
+    function O(t) {
+        if (h.ie && h.win && t.readyState != 4) {
+            var r = a("div");
+            t.parentNode.insertBefore(r, t);
+            r.parentNode.replaceChild(G(t), r);
+            t.style.display = "none";
+            var q = function() {
+                t.parentNode.removeChild(t)
+            };
+            I(j, "onload", q)
+        } else {
+            t.parentNode.replaceChild(G(t), t)
+        }
+    }
+
+    function G(v) {
+        var u = a("div");
+        if (h.win && h.ie) {
+            u.innerHTML = v.innerHTML
+        } else {
+            var r = v.getElementsByTagName(Q)[0];
+            if (r) {
+                var w = r.childNodes;
+                if (w) {
+                    var q = w.length;
+                    for (var t = 0; t < q; t++) {
+                        if (!(w[t].nodeType == 1 && w[t].nodeName == "PARAM") && !(w[t].nodeType == 8)) {
+                            u.appendChild(w[t].cloneNode(true))
+                        }
+                    }
+                }
+            }
+        }
+        return u
+    }
+
+    function U(AG, AE, t) {
+        var q,v = C(t);
+        if (v) {
+            if (typeof AG.id == b) {
+                AG.id = t
+            }
+            if (h.ie && h.win) {
+                var AF = "";
+                for (var AB in AG) {
+                    if (AG[AB] != Object.prototype[AB]) {
+                        if (AB.toLowerCase() == "data") {
+                            AE.movie = AG[AB]
+                        } else {
+                            if (AB.toLowerCase() == "styleclass") {
+                                AF += ' class="' + AG[AB] + '"'
+                            } else {
+                                if (AB.toLowerCase() != "classid") {
+                                    AF += " " + AB + '="' + AG[AB] + '"'
+                                }
+                            }
+                        }
+                    }
+                }
+                var AD = "";
+                for (var AA in AE) {
+                    if (AE[AA] != Object.prototype[AA]) {
+                        AD += '<param name="' + AA + '" value="' + AE[AA] + '" />'
+                    }
+                }
+                v.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' + AF + ">" + AD + "</object>";
+                i[i.length] = AG.id;
+                q = C(AG.id)
+            } else {
+                if (h.webkit && h.webkit < 312) {
+                    var AC = a("embed");
+                    AC.setAttribute("type", P);
+                    for (var z in AG) {
+                        if (AG[z] != Object.prototype[z]) {
+                            if (z.toLowerCase() == "data") {
+                                AC.setAttribute("src", AG[z])
+                            } else {
+                                if (z.toLowerCase() == "styleclass") {
+                                    AC.setAttribute("class", AG[z])
+                                } else {
+                                    if (z.toLowerCase() != "classid") {
+                                        AC.setAttribute(z, AG[z])
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    for (var y in AE) {
+                        if (AE[y] != Object.prototype[y]) {
+                            if (y.toLowerCase() != "movie") {
+                                AC.setAttribute(y, AE[y])
+                            }
+                        }
+                    }
+                    v.parentNode.replaceChild(AC, v);
+                    q = AC
+                } else {
+                    var u = a(Q);
+                    u.setAttribute("type", P);
+                    for (var x in AG) {
+                        if (AG[x] != Object.prototype[x]) {
+                            if (x.toLowerCase() == "styleclass") {
+                                u.setAttribute("class", AG[x])
+                            } else {
+                                if (x.toLowerCase() != "classid") {
+                                    u.setAttribute(x, AG[x])
+                                }
+                            }
+                        }
+                    }
+                    for (var w in AE) {
+                        if (AE[w] != Object.prototype[w] && w.toLowerCase() != "movie") {
+                            F(u, w, AE[w])
+                        }
+                    }
+                    v.parentNode.replaceChild(u, v);
+                    q = u
+                }
+            }
+        }
+        return q
+    }
+
+    function F(t, q, r) {
+        var u = a("param");
+        u.setAttribute("name", q);
+        u.setAttribute("value", r);
+        t.appendChild(u)
+    }
+
+    function X(r) {
+        var q = C(r);
+        if (q && (q.nodeName == "OBJECT" || q.nodeName == "EMBED")) {
+            if (h.ie && h.win) {
+                if (q.readyState == 4) {
+                    B(r)
+                } else {
+                    j.attachEvent("onload", function() {
+                        B(r)
+                    })
+                }
+            } else {
+                q.parentNode.removeChild(q)
+            }
+        }
+    }
+
+    function B(t) {
+        var r = C(t);
+        if (r) {
+            for (var q in r) {
+                if (typeof r[q] == "function") {
+                    r[q] = null
+                }
+            }
+            r.parentNode.removeChild(r)
+        }
+    }
+
+    function C(t) {
+        var q = null;
+        try {
+            q = K.getElementById(t)
+        } catch(r) {
+        }
+        return q
+    }
+
+    function a(q) {
+        return K.createElement(q)
+    }
+
+    function I(t, q, r) {
+        t.attachEvent(q, r);
+        d[d.length] = [t,q,r]
+    }
+
+    function c(t) {
+        var r = h.pv,q = t.split(".");
+        q[0] = parseInt(q[0], 10);
+        q[1] = parseInt(q[1], 10) || 0;
+        q[2] = parseInt(q[2], 10) || 0;
+        return(r[0] > q[0] || (r[0] == q[0] && r[1] > q[1]) || (r[0] == q[0] && r[1] == q[1] && r[2] >= q[2])) ? true : false
+    }
+
+    function V(v, r) {
+        if (h.ie && h.mac) {
+            return
+        }
+        var u = K.getElementsByTagName("head")[0],t = a("style");
+        t.setAttribute("type", "text/css");
+        t.setAttribute("media", "screen");
+        if (!(h.ie && h.win) && typeof K.createTextNode != b) {
+            t.appendChild(K.createTextNode(v + " {" + r + "}"))
+        }
+        u.appendChild(t);
+        if (h.ie && h.win && typeof K.styleSheets != b && K.styleSheets.length > 0) {
+            var q = K.styleSheets[K.styleSheets.length - 1];
+            if (typeof q.addRule == Q) {
+                q.addRule(v, r)
+            }
+        }
+    }
+
+    function W(t, q) {
+        var r = q ? "visible" : "hidden";
+        if (e && C(t)) {
+            C(t).style.visibility = r
+        } else {
+            V("#" + t, "visibility:" + r)
+        }
+    }
+
+    function g(s) {
+        var r = /[\\\"<>\.;]/;
+        var q = r.exec(s) != null;
+        return q ? encodeURIComponent(s) : s
+    }
+
+    var D = function() {
+        if (h.ie && h.win) {
+            window.attachEvent("onunload", function() {
+                var w = d.length;
+                for (var v = 0; v < w; v++) {
+                    d[v][0].detachEvent(d[v][1], d[v][2])
+                }
+                var t = i.length;
+                for (var u = 0; u < t; u++) {
+                    X(i[u])
+                }
+                for (var r in h) {
+                    h[r] = null
+                }
+                h = null;
+                for (var q in swfobject) {
+                    swfobject[q] = null
+                }
+                swfobject = null
+            })
+        }
+    }();
+    return{registerObject:function(u, q, t) {
+        if (!h.w3cdom || !u || !q) {
+            return
+        }
+        var r = {};
+        r.id = u;
+        r.swfVersion = q;
+        r.expressInstall = t ? t : false;
+        N[N.length] = r;
+        W(u, false)
+    },getObjectById:function(v) {
+        var q = null;
+        if (h.w3cdom) {
+            var t = C(v);
+            if (t) {
+                var u = t.getElementsByTagName(Q)[0];
+                if (!u || (u && typeof t.SetVariable != b)) {
+                    q = t
+                } else {
+                    if (typeof u.SetVariable != b) {
+                        q = u
+                    }
+                }
+            }
+        }
+        return q
+    },embedSWF:function(x, AE, AB, AD, q, w, r, z, AC) {
+        if (!h.w3cdom || !x || !AE || !AB || !AD || !q) {
+            return
+        }
+        AB += "";
+        AD += "";
+        if (c(q)) {
+            W(AE, false);
+            var AA = {};
+            if (AC && typeof AC === Q) {
+                for (var v in AC) {
+                    if (AC[v] != Object.prototype[v]) {
+                        AA[v] = AC[v]
+                    }
+                }
+            }
+            AA.data = x;
+            AA.width = AB;
+            AA.height = AD;
+            var y = {};
+            if (z && typeof z === Q) {
+                for (var u in z) {
+                    if (z[u] != Object.prototype[u]) {
+                        y[u] = z[u]
+                    }
+                }
+            }
+            if (r && typeof r === Q) {
+                for (var t in r) {
+                    if (r[t] != Object.prototype[t]) {
+                        if (typeof y.flashvars != b) {
+                            y.flashvars += "&" + t + "=" + r[t]
+                        } else {
+                            y.flashvars = t + "=" + r[t]
+                        }
+                    }
+                }
+            }
+            f(function() {
+                U(AA, y, AE);
+                if (AA.id == AE) {
+                    W(AE, true)
+                }
+            })
+        } else {
+            if (w && !A && c("6.0.65") && (h.win || h.mac)) {
+                A = true;
+                W(AE, false);
+                f(function() {
+                    var AF = {};
+                    AF.id = AF.altContentId = AE;
+                    AF.width = AB;
+                    AF.height = AD;
+                    AF.expressInstall = w;
+                    k(AF)
+                })
+            }
+        }
+    },getFlashPlayerVersion:function() {
+        return{major:h.pv[0],minor:h.pv[1],release:h.pv[2]}
+    },hasFlashPlayerVersion:c,createSWF:function(t, r, q) {
+        if (h.w3cdom) {
+            return U(t, r, q)
+        } else {
+            return undefined
+        }
+    },removeSWF:function(q) {
+        if (h.w3cdom) {
+            X(q)
+        }
+    },createCSS:function(r, q) {
+        if (h.w3cdom) {
+            V(r, q)
+        }
+    },addDomLoadEvent:f,addLoadEvent:R,getQueryParamValue:function(v) {
+        var u = K.location.search || K.location.hash;
+        if (v == null) {
+            return g(u)
+        }
+        if (u) {
+            var t = u.substring(1).split("&");
+            for (var r = 0; r < t.length; r++) {
+                if (t[r].substring(0, t[r].indexOf("=")) == v) {
+                    return g(t[r].substring((t[r].indexOf("=") + 1)))
+                }
+            }
+        }
+        return""
+    },expressInstallCallback:function() {
+        if (A && M) {
+            var q = C(m);
+            if (q) {
+                q.parentNode.replaceChild(M, q);
+                if (l) {
+                    W(l, true);
+                    if (h.ie && h.win) {
+                        M.style.display = "block"
+                    }
+                }
+                M = null;
+                l = null;
+                A = false
+            }
+        }
+    }}
+}();
+                
+</script>
+
+
+<script  language="javascript"  type="text/javascript">        
+          function zoomOut() {
+            var flashObj = swfobject.getObjectById("map");
+              if (flashObj) {
+                flashObj.zoomOut();
+              }
+        }
+        
+        function zoomTo(_state) {
+            var flashObj = swfobject.getObjectById("map");
+              if (flashObj) {
+                flashObj.zoomTo(_state);
+            }
+        }
+        
+        function zoomPoint(_point) {
+            var flashObj = swfobject.getObjectById("map");
+              if (flashObj) {
+                flashObj.zoomPoint(_point);
+            }
+        }          
+
+        function setColor(_state, _color) {
+            var flashObj = swfobject.getObjectById("map");
+              if (flashObj) {
+                flashObj.setColor(_state, _color);
+            }
+        }
+
+        function refreshData(_data) {
+              var flashObj = swfobject.getObjectById("map");
+              if (flashObj) {
+                flashObj.refreshData(_data);
+            }
+        }
+    </script>   <script type="text/javascript" src="http://twinmaps.webvanta.com/swfobject.js"></script>     <script type="text/javascript">
+        //swfobject.registerObject("DIYMap", "10.0.0");
+        var flashvars = {
+          data_file: "senate.xml",
+          use_js: "on",
+        };
+        var params = {
+          allowscriptaccess: "always"
+        };
+      swfobject.embedSWF("images/us_albers.swf", "map", "500", "300", "9.0.0", "expressInstall.swf", flashvars, params);
+    </script>
+
+  <!-- page-specific javascript -->
+  </head> 
+  <body> 
+   <div id="outer_wrapper"> 
+    <div id='wrapper'>
+      <div class='container'>
+      <!--  <div class="top-hz-bar"><div>&nbsp;</div></div>
+ */ -->
+      <div id='header' class='clearfix prepend-1 append-1'>
+  <div class='clearfix'>
+    <div id='logo-name'>
+      <a href='index.html'>
+        <!-- note: /webvanta is a shared file area that you can can access but not modify; change this path to point to your logo -->
+        <h2>Twin Maps</h2>
+      </a>
+    </div>
+    <div id='topLinks'>
+      <ul>
+        <li><a href="feed.xml.rss"
+          class='icon'><img src="webvanta/themes/master/1.0/images/feed.gif" alt='RSS Feed' /></a></li>        
+      </ul>    
+    </div>
+  </div>
+  
+    <div id='linkContainer'>
+      <ul class="sf-menu sf-shadow" id='nav'>
+          
+            <li><a href='index.html' >Home</a>
+            
+           </li>
+         
+            <li><a href='bp/blog.html' >Blog</a>
+            
+           </li>
+         
+            <li><a href='multimedia.html' >Media</a>
+            
+           </li>
+         
+            <li><a href='about.html' >About</a>
+            
+           </li>
+         
+            <li><a href='calendar/index.html' >Calendar</a>
+            
+           </li>
+         
+            <li><a href='Sites.html' class='current'>Sites</a>
+            
+           </li>
+         
+            <li><a href='contact.html' >Contact</a>
+            
+           </li>
+         
+        </ul>
+    </div>
+  
+</div>
+   <!--  header snippet provides visual header and top navigation -->
+ <!--    <img width="950" height="156" alt="" src="/images/img07.jpg" /> -->
+      <div id='earth'> <!-- class='clearfix' -->
+        <div id='content_area'  class='clearfix'> 
+         
+        <div class='span-14 prepend-1 append-1'>  
+              <!-- begin code region 'pod_455277' -->
+<div class=' wv-code-region-pod_455277'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Volunteer Map of the United States</title>
+</head>
+ 
+<body>
+  <br />
+  <br />
+  <h1>Volunteer Map</h1>
+  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="600" height="397" id="zoom_map" align="top">
+  <param name="movie" value="/swf/us.swf?data_file=/xml/ucc.xml"/>
+<param name="quality" value="high" />
+<param name="bgcolor" value="#FFFFFF" /> <embed src="swf/us-data_file=%7Cxml%7Cucc.xml.swf" quality="high" bgcolor="#FFFFFF"  width="600" height="387" name="Clickable U.S. Map" align="top" 
+type="application/x-shockwave-flash" 
+pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+</object><br />
+  <h3> Follow us on our Travels</h3>
+  <p>We have provided this interactive map so you can follow us on our travels across the United States. The dots on the map indicate the location of volunteer Ministry service sites. You can zoom in on the Map to get more information about a site. On the right we have placed our most recent visits.
+  </p>
+  
+ <h5><a href="Site_list.html">Show Site List</a> </h5> 
+ 
+
+<!--<p style="font-family:sans;font-size:small;"><a href="http://backspace.com/mapapp/">Powered by DIY Map</a></p>-->
+
+ <!-- Begin MailChimp Signup Form -->
+<!--[if IE]>
+<style type="text/css" media="screen">
+    #mc_embed_signup fieldset {position: relative;}
+    #mc_embed_signup legend {position: absolute; top: -1em; left: .2em;}
+</style>
+<![endif]--> 
+<!--[if IE 7]>
+<style type="text/css" media="screen">
+    .mc-field-group {overflow:visible;}
+</style>
+<![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.form.js"></script>
+
+<div id="mc_embed_signup">
+<form action="http://twinmaps.us2.list-manage.com/subscribe/post?u=486b567eb6d9ee3f33c4a79c8&amp;id=c41266dbe6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="font: normal 100% Arial, sans-serif;font-size: 10px;">
+    <fieldset style="-moz-border-radius: 4px;border-radius: 4px;-webkit-border-radius: 4px;border: 1px solid #ccc;padding-top: 1.5em;margin: .5em 0;background-color: #fff;color: #000;text-align: left;">
+    <legend style="white-space: normal;text-transform: capitalize;font-weight: bold;color: #000;background: #fff;padding: .5em 1em;border: 1px solid #ccc;-moz-border-radius: 4px;border-radius: 4px;-webkit-border-radius: 4px;font-size: 1.2em;"><span>Join our mailing list</span></legend>
+<div class="indicate-required" style="text-align: right;font-style: italic;overflow: hidden;color: #000;margin: 0 9% 0 0;">* indicates required</div>
+<div class="mc-field-group" style="margin: 1.3em 5%;clear: both;overflow: hidden;">
+<label for="mce-EMAIL" style="display: block;margin: .3em 0;line-height: 1em;font-weight: bold;">Email Address <strong class="note-required">*</strong>
+</label>
+<input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="margin-right: 1.5em;padding: .2em .3em;width: 90%;float: left;z-index: 999;">
+</div>
+        <div id="mce-responses" style="float: left;top: -1.4em;padding: 0em .5em 0em .5em;overflow: hidden;width: 90%;margin: 0 5%;clear: both;">
+            <div class="response" id="mce-error-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;float: left;top: -1.5em;z-index: 1;width: 80%;background: FBE3E4;color: #D12F19;"></div>
+            <div class="response" id="mce-success-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;float: left;top: -1.5em;z-index: 1;width: 80%;background: #E3FBE4;color: #529214;"></div>
+        </div>
+        <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn" style="clear: both;width: auto;display: block;margin: 1em 0 1em 5%;"></div>
+    </fieldset>    
+    <a href="Sites.html#" id="mc_embed_close" class="mc_embed_close" style="display: none;">Close</a>
+</form>
+</div>
+<script type="text/javascript">
+var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = 'margin: 1em 0 0 0; padding: 1em 0.5em 0.5em 0.5em; background: FFEEEE none repeat scroll 0% 0%; font-weight: bold; float: left; z-index: 1; width: 80%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: FF0000;';
+}
+var mce_jQuery = jQuery.noConflict();
+mce_jQuery(document).ready( function($) {
+  var options = { errorClass: 'mce_inline_error', errorElement: 'div', errorStyle: err_style, onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+  var mce_validator = mce_jQuery("#mc-embedded-subscribe-form").validate(options);
+  options = { url: 'http://twinmaps.us2.list-manage.com/subscribe/post-json?u=486b567eb6d9ee3f33c4a79c8&id=c41266dbe6&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                beforeSubmit: function(){
+                    mce_jQuery('#mce_tmp_error_msg').remove();
+                    mce_jQuery('.datefield','#mc_embed_signup').each(
+                        function(){
+                            var txt = 'filled';
+                            var fields = new Array();
+                            var i = 0;
+                            mce_jQuery(':text', this).each(
+                                function(){
+                                    fields[i] = this;
+                                    i++;
+                                });
+                            mce_jQuery(':hidden', this).each(
+                                function(){
+                                    if ( fields[0].value=='MM' && fields[1].value=='DD' && fields[2].value=='YYYY' ){
+                                        this.value = '';
+                                    } else if ( fields[0].value=='' && fields[1].value=='' && fields[2].value=='' ){
+                                        this.value = '';
+                                    } else {
+                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                                    }
+                                });
+                        });
+                    return mce_validator.form();
+                }, 
+                success: mce_success_cb
+            };
+  mce_jQuery('#mc-embedded-subscribe-form').ajaxForm(options);
+
+});
+function mce_success_cb(resp){
+    mce_jQuery('#mce-success-response').hide();
+    mce_jQuery('#mce-error-response').hide();
+    if (resp.result=="success"){
+        mce_jQuery('#mce-'+resp.result+'-response').show();
+        mce_jQuery('#mce-'+resp.result+'-response').html(resp.msg);
+        mce_jQuery('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+        });
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                mce_jQuery('#mce-'+resp.result+'-response').show();
+                mce_jQuery('#mce-'+resp.result+'-response').html(msg);            
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                
+                var input_id = '#mc_embed_signup';
+                var f = mce_jQuery(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = mce_jQuery(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = mce_jQuery(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = mce_jQuery().parent(input_id).get(0);
+                }
+                if (f){
+                    mce_jQuery(f).append(html);
+                    mce_jQuery(input_id).focus();
+                } else {
+                    mce_jQuery('#mce-'+resp.result+'-response').show();
+                    mce_jQuery('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            mce_jQuery('#mce-'+resp.result+'-response').show();
+            mce_jQuery('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+</script>
+<!--End mc_embed_signup--> 
+  
+</body>
+</html>
+
+
+
+
+</div>
+<!-- end code region pod_455277 -->    <!--  content for main column goes here -->
+           </div>
+           <div class="span-6  append-2 last item_box">
+             <!-- begin code region 'pod_455280' -->
+<div class=' wv-code-region-pod_455280'><img src="images/volunteer_logo.png" class="floatLeft" alt="Volunteer Ministries" >
+<h3><center>Volunteer Sites</center> </h3>
+<hr/>
+
+
+      <!-- begin edit region 'kdb_id_237521'--> <div id='kdb_id_237521' class='kb_type_dynode wv-edit-region '>
+        <div class='clearfix'>
+          <h4><a href="Site_des/237521-humane-borders.html">Humane Borders</a></h4>    
+          <p>
+             <p>Humane Borders, motivated by faith, offers humanitarian assistance to  those in need through the deployment emergency water stations on and  near the U.S.-Mexico border. To learn about our history, organization,  leaders and activities, <a href="http://www.humaneborders.org/about/about_index.html">click here</a>.</p>
+          </p>
+          <hr>
+        </div>
+      </div> <!-- end edit region 'kdb_id_237521'-->
+</div>
+<!-- end code region pod_455280 -->     <!--  content for sidebar goes here -->
+          </div>
+          </div> <!--eaarth-->
+         </div><!--content area-->
+        </div><!--container-->
+       <div style="clear:both;"></div>
+<div id='footer_container' class="clearfix prepend-1 append-1">
+<div id="footer">
+  <ul>
+    <li>&copy; Copyright 2010, Brooke and Sons Web Builders, LLC</li>
+    <li><a href='privacy.html'>Privacy</a></li>
+    <li class="last">Created with <a href='http://www.webvanta.com'>Webvanta CMS for Designers</a></li>
+    <li class="last">, <a href='http://www.freecsstemplates.org/'>FreeCSSTemplates</a></li>
+    <li class="last">, <a href='http://www.backspace.com/mapapp/'>DIYMaps</a></li>
+     <li class="last">United Church of Christ <a href='http://www.ucc.org/volunteer/'>UCC Volunteer Ministries</a></li>
+    
+    
+  </ul>
+</div>
+</div>
+   <!-- footer  snippet provides visual footer -->
+        
+      
+   </div><!--wrapper-->
+  
+ </div><!--outer wrapper-->
+    
+  <div id="webvanta-features" class="wvif">
+  <script type="text/javascript" src="admin/v2/js/webvanta-bootstrap-2.0.0.js"></script>
+</div></body>
+</html>

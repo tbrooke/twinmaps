@@ -1,0 +1,1010 @@
+<!DOCTYPE html> 
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=8"/>  -->
+  
+  <!-- jquery library -->
+<script type="text/javascript" src="http://use.typekit.com/bjs8nfo.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="webvanta/js/jquery/1.4/jquery-1.4.2.min.js" type="text/javascript"></script>
+<!-- jquery form plugin required for ajax form submission script -->
+<script src="webvanta/js/jquery/1.4/plugins/form/jquery.form.js" type="text/javascript"></script>
+<!-- webvanta code for processing of comment submissions -->
+<script src="form.js" type="text/javascript"></script>
+<!-- jquery validation plugin required for form validation -->
+<script src="webvanta/js/jquery/1.4/plugins/validate/jquery.validate.min.js" type="text/javascript"></script> 
+<!-- png transparency fix for IE; delete this if not using pngs or if you don't care about IE6 -->
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/pngfix/jquery.pngFix.pack.js"></script> 
+<!-- support for treeview navigator-->
+<script  type="text/javascript"  src="webvanta/js/jquery/1.3/plugins/jquery-treeview/jquery.treeview.js"></script>
+<!-- superfish drop-down menu -->
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/hoverIntent.js"></script>
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/superfish.js"></script>
+<!-- initialize Superfish and pngfix-->
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $('ul.sf-menu').superfish({
+          autoArrows:  false,                // disable generation of arrow mark-up
+          dropShadows: true
+        });
+        $(document).pngFix();                // delete if not using transparent pngs or if you don't care about IE6
+    });
+ 
+</script>
+  <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8" />
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css' /> 
+
+<!-- to replace the favicon change the href below to point to one of your own images -->
+<link rel="shortcut icon" type="image/x-icon" href="webvanta/img/favicon.ico" />
+<title>Photo Gallery</title>    <!-- title tag pulled from CMS -->
+<meta name="description" content="" /><meta name="keywords" content="" />                         <!-- keyword and description from CMS -->
+
+
+<!-- autodiscovery link for the RSS feed  -->
+
+  <!-- for all other pages, use the feed for everything but posts -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="feed.xml.rss" />
+
+
+<link rel="stylesheet" href="webvanta/css/blueprint/0.9.1/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="webvanta/css/blueprint/0.9.1/print.css" type="text/css" media="print" />  
+
+<!-- IE Links -->
+
+
+
+ 
+
+<link rel='stylesheet' type='text/css' href='earthlingtwo.css' media='all' />
+
+<link rel='stylesheet' type='text/css' href='dropdown_menu.css' media='all' />
+
+<link  rel='stylesheet'  type='text/css' href='treenav.css' media='all' />
+
+ 
+ 
+    <!-- page-specific CSS -->
+ 
+  <link rel='stylesheet' type='text/css' href='photo-gallery.css' media='screen, projection' />
+<script src="webvanta/js/jquery/1.4/plugins/galleriffic-2.0/js/jquery.galleriffic.js" type="text/javascript"></script>
+<script type="text/javascript" src="webvanta/js/jquery/1.4/plugins/galleriffic-2.0/js/jquery.opacityrollover.js"></script>
+<script>
+jQuery(document).ready(function(jQuery){
+
+   // Initially set opacity on thumbs and add
+   // additional styling for hover effect on thumbs
+   var onMouseOutOpacity = 0.67;
+   $('#thumbs ul.thumbs li').opacityrollover({
+     mouseOutOpacity:   onMouseOutOpacity,
+     mouseOverOpacity:  1.0,
+     fadeSpeed:         'fast',
+     exemptionSelector: '.selected'
+   });
+
+  var imgArray = jQuery.makeArray(jQuery("#thumbs .thumb"));
+  if (imgArray.length <= 1){ jQuery("#controls").hide(); }      // hide controls if only one photo
+  
+  // Initialize Minimal Galleriffic Gallery
+  if (imgArray.length){
+    var gallery = $('#thumbs').galleriffic({
+      autoStart:              true,                    // set to false if you don't want slideshow to start automatically
+      delay:                  4000,                    // time for each image in a slideshow, in milliseconds
+      numThumbs:              10,                      // number of thumbnails shown at one time (i.e., size of page when paginated)                  
+      preloadAhead:           10,
+      enableTopPager:         false,                   // show thumbnail pagination controls at bottom
+      enableBottomPager:      true,
+      maxPagesToShow:         7,
+      imageContainerSel:      '#slideshow',            // set ids for the various containers
+      controlsContainerSel:   '#controls',
+      captionContainerSel:    '#caption',
+      loadingContainerSel:    '#loading',
+      renderSSControls:       true,
+      renderNavControls:      true,
+      playLinkText:           'Play',                  // set the text for all the controls
+      pauseLinkText:          'Pause',
+      prevLinkText:           '&nbsp;',                // the css adds background images so no text needed
+      nextLinkText:           '&nbsp;',                //   but a space is needed for the image to show up
+      nextPageLinkText:       'Next &raquo;',
+      prevPageLinkText:       '&laquo; Prev',
+      syncTransitions:         true,
+      defaultTransitionDuration: 900,
+      onSlideChange:             function(prevIndex, nextIndex) {   // fade effects on thumbnails
+        this.find('ul.thumbs').children()
+          .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+          .eq(nextIndex).fadeTo('fast', 1.0);
+      },
+      onPageTransitionOut:       function(callback) {               // fade effects for main image
+        this.fadeTo('fast', 0.0, callback);
+      },
+      onPageTransitionIn:        function() {
+        this.fadeTo('fast', 1.0);
+      }
+    });
+  }
+  else {
+     jQuery('#empty_gallery').show();                   // if there are no images, show "empty gallery" text
+  }
+});
+</script>  <!-- page-specific javascript -->
+  </head> 
+  <body> 
+   <div id="outer_wrapper"> 
+    <div id='wrapper'>
+      <div class='container'>
+      <!--  <div class="top-hz-bar"><div>&nbsp;</div></div>
+ */ -->
+      <div id='header' class='clearfix prepend-1 append-1'>
+  <div class='clearfix'>
+    <div id='logo-name'>
+      <a href='index.html'>
+        <!-- note: /webvanta is a shared file area that you can can access but not modify; change this path to point to your logo -->
+        <h2>Twin Maps</h2>
+      </a>
+    </div>
+    <div id='topLinks'>
+      <ul>
+        <li><a href="feed.xml.rss"
+          class='icon'><img src="webvanta/themes/master/1.0/images/feed.gif" alt='RSS Feed' /></a></li>        
+      </ul>    
+    </div>
+  </div>
+  
+    <div id='linkContainer'>
+      <ul class="sf-menu sf-shadow" id='nav'>
+          
+            <li><a href='index.html' >Home</a>
+            
+           </li>
+         
+            <li><a href='bp/blog.html' >Blog</a>
+            
+           </li>
+         
+            <li><a href='multimedia.html' >Media</a>
+            
+           </li>
+         
+            <li><a href='about.html' >About</a>
+            
+           </li>
+         
+            <li><a href='calendar/index.html' >Calendar</a>
+            
+           </li>
+         
+            <li><a href='Sites.html' >Sites</a>
+            
+           </li>
+         
+            <li><a href='contact.html' >Contact</a>
+            
+           </li>
+         
+        </ul>
+    </div>
+  
+</div>
+   <!--  header snippet provides visual header and top navigation -->
+ <!--    <img width="950" height="156" alt="" src="/images/img07.jpg" /> -->
+      <div id='earth'> <!-- class='clearfix' -->
+        <div id='content_area'  class='clearfix'> 
+         
+        <div class='span-14 prepend-1 append-1'>  
+              <!-- begin code region 'pod_453421' -->
+<div class=' wv-code-region-pod_453421'><div class='span-16  last'>  <!-- 640-pixel column for main images, via  Blueprint CSS -->
+    <div id='empty_gallery' style='display:none'>
+      <h2>No images are  currently in the gallery</h2>
+      <p>Upload them via Content > Images and Files</p>
+      <p>When  uploading, select the "gallery" tag</p>
+      <p>See <a href="http://www.webvanta.com/photo-gallery-help">Using the  Photo Gallery</a> for details</p>
+    </div>
+  <div id='container'>  <!--  the divs in this container are filled with content by the galleriffic JS  -->
+    <div id="gallery" class="content">
+      <div class="slideshow-container">              <!-- main image area -->
+        <div id="loading" class="loader"></div>
+         <div id="slideshow" class="slideshow"></div>
+      </div>
+      <div id="caption" class="caption"></div>       <!-- caption area -->
+      <div id="controls" class="controls clearfix"></div>     <!-- slideshow controls -->
+    </div>       
+  </div>
+</div>
+
+<script type="text/javascript">
+    // Show the main image display only if JS is enabled
+    jQuery('div.content').css('display', 'block');
+</script></div>
+<!-- end code region pod_453421 -->    <!--  content for main column goes here -->
+           </div>
+           <div class="span-6  append-2 last item_box">
+             <!-- begin code region 'pod_453424' -->
+<div class=' wv-code-region-pod_453424'><div class='span-6'>     <!-- 240-pixel column for  thumbnails, via Bluetprint CSS -->
+     <div id="thumbs" class="navigation">  <!-- galleriffic uses the contents of this div  to drive everything -->
+      <ul class="thumbs noscript">    
+            <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/bees%20(2).jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/bees%20(2).jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Bees</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Bill%20and%20Pat.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Bill%20and%20Pat.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Bill and Pat at Abernathy Laurels</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Black%20Smoke%20redux.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Black%20Smoke%20redux.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Black%20Smoke.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Black%20Smoke.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Chilpancingo.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Chilpancingo.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Empty%20Coffee%20Cup.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Empty%20Coffee%20Cup.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/goat.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/goat.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Goat</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2573.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2573.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2588.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2588.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2655.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2655.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2882.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2882.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2884.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2884.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2893.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2893.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2898.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2898.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2899.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2899.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2902.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2902.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2904.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2904.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2905.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2905.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2906.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2906.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2911.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2911.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2919.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2919.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_2934.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_2934.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3090.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3090.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3096.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3096.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3100.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3100.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3101.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3101.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3102.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3102.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3103.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3103.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3109.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3109.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3116.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3116.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3128.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3128.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3129.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3129.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Folk%20Life%20Center/IMG_3150.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Folk%20Life%20Center/IMG_3150.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4407.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4407.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4440.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4440.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Bowl of fruit</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4469.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4469.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Independence Hall</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4489.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4489.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Independence Hall</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4496.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4496.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Clock</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4514.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4514.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Liberty Bell</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4867.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4867.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Clothes on Hanger</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4868.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4868.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Ladies in St. Louis</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4934.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4934.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Children at table</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4953.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4953.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Children Playing</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_4954.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_4954.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Little Girls Playing</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5035.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5035.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Playground</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5058.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5058.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>ECH Building</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5067%20(2).JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5067%20(2).JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5073%20(2).JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5073%20(2).JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5595.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5595.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5607.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5607.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5749.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5749.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5757.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5757.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5762.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5762.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5788.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5788.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5799.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5799.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_5811.JPG"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_5811.JPG' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6940.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6940.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6944.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6944.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6950.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6950.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6953.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6953.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6958.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6958.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6959.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6959.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6970.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6970.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6973.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6973.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6982.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6982.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_6996.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_6996.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/IMG_7004.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/IMG_7004.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/piglets.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/piglets.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                     <p>Pigletes</p>
+                  
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Toxic-Water.png"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Toxic-Water.png' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/Trash%20in%20Chilpancingo.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/Trash%20in%20Chilpancingo.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/upload%201.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/upload%201.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+           <!--  change this tag to find the assets you want -->
+             
+               <li><a class="thumb" href="rendition.medium/voodoo%20wedding%20resized.jpg"> <!-- choose rendition for large image -->
+                <img src='rendition.square_thumb/voodoo%20wedding%20resized.jpg' alt='' />    <!--  choose rendition for thumbnail -->
+              </a>
+                <div class='caption'>
+                   
+                 </div>
+              </li>
+            
+        
+      </ul>
+    </div>    
+</div></div>
+<!-- end code region pod_453424 -->     <!--  content for sidebar goes here -->
+          </div>
+          </div> <!--eaarth-->
+         </div><!--content area-->
+        </div><!--container-->
+       <div style="clear:both;"></div>
+<div id='footer_container' class="clearfix prepend-1 append-1">
+<div id="footer">
+  <ul>
+    <li>&copy; Copyright 2010, Brooke and Sons Web Builders, LLC</li>
+    <li><a href='privacy.html'>Privacy</a></li>
+    <li class="last">Created with <a href='http://www.webvanta.com'>Webvanta CMS for Designers</a></li>
+    <li class="last">, <a href='http://www.freecsstemplates.org/'>FreeCSSTemplates</a></li>
+    <li class="last">, <a href='http://www.backspace.com/mapapp/'>DIYMaps</a></li>
+     <li class="last">United Church of Christ <a href='http://www.ucc.org/volunteer/'>UCC Volunteer Ministries</a></li>
+    
+    
+  </ul>
+</div>
+</div>
+   <!-- footer  snippet provides visual footer -->
+        
+      
+   </div><!--wrapper-->
+  
+ </div><!--outer wrapper-->
+    
+  <div id="webvanta-features" class="wvif">
+  <script type="text/javascript" src="admin/v2/js/webvanta-bootstrap-2.0.0.js"></script>
+</div></body>
+</html>

@@ -1,0 +1,1915 @@
+<!DOCTYPE html> 
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=8"/>  -->
+  
+  <!-- jquery library -->
+<script type="text/javascript" src="http://use.typekit.com/bjs8nfo.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="../webvanta/js/jquery/1.4/jquery-1.4.2.min.js" type="text/javascript"></script>
+<!-- jquery form plugin required for ajax form submission script -->
+<script src="../webvanta/js/jquery/1.4/plugins/form/jquery.form.js" type="text/javascript"></script>
+<!-- webvanta code for processing of comment submissions -->
+<script src="../form.js" type="text/javascript"></script>
+<!-- jquery validation plugin required for form validation -->
+<script src="../webvanta/js/jquery/1.4/plugins/validate/jquery.validate.min.js" type="text/javascript"></script> 
+<!-- png transparency fix for IE; delete this if not using pngs or if you don't care about IE6 -->
+<script type="text/javascript" src="../webvanta/js/jquery/1.4/plugins/pngfix/jquery.pngFix.pack.js"></script> 
+<!-- support for treeview navigator-->
+<script  type="text/javascript"  src="../webvanta/js/jquery/1.3/plugins/jquery-treeview/jquery.treeview.js"></script>
+<!-- superfish drop-down menu -->
+<script type="text/javascript" src="../webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/hoverIntent.js"></script>
+<script type="text/javascript" src="../webvanta/js/jquery/1.4/plugins/superfish-1.4.8/js/superfish.js"></script>
+<!-- initialize Superfish and pngfix-->
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $('ul.sf-menu').superfish({
+          autoArrows:  false,                // disable generation of arrow mark-up
+          dropShadows: true
+        });
+        $(document).pngFix();                // delete if not using transparent pngs or if you don't care about IE6
+    });
+ 
+</script>
+  <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8" />
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css' /> 
+
+<!-- to replace the favicon change the href below to point to one of your own images -->
+<link rel="shortcut icon" type="image/x-icon" href="../webvanta/img/favicon.ico" />
+<title>Calendar of Events</title>    <!-- title tag pulled from CMS -->
+<meta name="description" content="" /><meta name="keywords" content="" />                         <!-- keyword and description from CMS -->
+
+
+<!-- autodiscovery link for the RSS feed  -->
+
+  <!-- for all other pages, use the feed for everything but posts -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="../feed.xml.rss" />
+
+
+<link rel="stylesheet" href="../webvanta/css/blueprint/0.9.1/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="../webvanta/css/blueprint/0.9.1/print.css" type="text/css" media="print" />  
+
+<!-- IE Links -->
+
+
+
+ 
+
+<link rel='stylesheet' type='text/css' href='../earthlingtwo.css' media='all' />
+
+<link rel='stylesheet' type='text/css' href='../dropdown_menu.css' media='all' />
+
+<link  rel='stylesheet'  type='text/css' href='../treenav.css' media='all' />
+
+ 
+ 
+  <link rel='stylesheet' type='text/css' href='../calendar.css' media='all' />
+  <!-- page-specific CSS -->
+ 
+  <!-- load FullCalendar plugin (assumes jQuery already loaded) -->
+<script src="../webvanta/js/jquery/1.4/plugins/fullcalendar-1.4.5/fullcalendar.min.js" type="text/javascript"></script> 
+<!-- initialize calendar -->
+<script type='text/javascript'>
+  $(document).ready(function($) {
+    $('#calendar').fullCalendar({
+      editable: false,      
+      header: {
+        left: 'prev,next today',
+        center: ' title',
+        right: 'month,basicWeek'
+      },
+      timeFormat: "",
+      events: [
+        
+          {
+            id: "237521-humane-borders",
+            title: $('<textarea/>').html("Humane Borders").val(),
+            start: "",
+            end: "",
+            url: "/event/237521-humane-borders",
+            allDay: false
+          }, 
+        
+          {
+            id: "171214-call-it-a-p-review-extra-video",
+            title: $('<textarea/>').html("Call it a (P)review: EXTRA VIDEO!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/171214-call-it-a-p-review-extra-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "181277-neighborhood-houses",
+            title: $('<textarea/>').html("Neighborhood Houses").val(),
+            start: "",
+            end: "",
+            url: "/event/181277-neighborhood-houses",
+            allDay: false
+          }, 
+        
+          {
+            id: "134408-ucan",
+            title: $('<textarea/>').html("UCAN").val(),
+            start: "",
+            end: "",
+            url: "/event/134408-ucan",
+            allDay: false
+          }, 
+        
+          {
+            id: "139778-hopewell-farms",
+            title: $('<textarea/>').html("Hopewell Farms").val(),
+            start: "",
+            end: "",
+            url: "/event/139778-hopewell-farms",
+            allDay: false
+          }, 
+        
+          {
+            id: "196543-abernathy-laurels",
+            title: $('<textarea/>').html("Abernathy Laurels").val(),
+            start: "",
+            end: "",
+            url: "/event/196543-abernathy-laurels",
+            allDay: false
+          }, 
+        
+          {
+            id: "176094-old-first-reformed-chuch",
+            title: $('<textarea/>').html("Old First Reformed Chuch").val(),
+            start: "",
+            end: "",
+            url: "/event/176094-old-first-reformed-chuch",
+            allDay: false
+          }, 
+        
+          {
+            id: "164169-gould-farm",
+            title: $('<textarea/>').html("Gould Farm").val(),
+            start: "",
+            end: "",
+            url: "/event/164169-gould-farm",
+            allDay: false
+          }, 
+        
+          {
+            id: "162196-ysop",
+            title: $('<textarea/>').html("YSOP").val(),
+            start: "",
+            end: "",
+            url: "/event/162196-ysop",
+            allDay: false
+          }, 
+        
+          {
+            id: "131513-urban-immersion",
+            title: $('<textarea/>').html("Urban Immersion").val(),
+            start: "",
+            end: "",
+            url: "/event/131513-urban-immersion",
+            allDay: false
+          }, 
+        
+          {
+            id: "120893-group-work-camp",
+            title: $('<textarea/>').html("Group Work Camp ").val(),
+            start: "",
+            end: "",
+            url: "/event/120893-group-work-camp",
+            allDay: false
+          }, 
+        
+          {
+            id: "409608-twin-maps-final-feature",
+            title: $('<textarea/>').html("Twin Maps - Final Feature").val(),
+            start: "",
+            end: "",
+            url: "/event/409608-twin-maps-final-feature",
+            allDay: false
+          }, 
+        
+          {
+            id: "397554-synod-wrap-up-final-numbers-and",
+            title: $('<textarea/>').html("Synod Wrap Up, Final Numbers, and What's Next").val(),
+            start: "",
+            end: "",
+            url: "/event/397554-synod-wrap-up-final-numbers-and",
+            allDay: false
+          }, 
+        
+          {
+            id: "392273-updates-from-synod",
+            title: $('<textarea/>').html("Updates from Synod").val(),
+            start: "",
+            end: "",
+            url: "/event/392273-updates-from-synod",
+            allDay: false
+          }, 
+        
+          {
+            id: "374711-ride-with-larry",
+            title: $('<textarea/>').html("Ride With Larry").val(),
+            start: "",
+            end: "",
+            url: "/event/374711-ride-with-larry",
+            allDay: false
+          }, 
+        
+          {
+            id: "371456-dates-for-the-final-feature",
+            title: $('<textarea/>').html("Dates for the Final Feature").val(),
+            start: "",
+            end: "",
+            url: "/event/371456-dates-for-the-final-feature",
+            allDay: false
+          }, 
+        
+          {
+            id: "349826-dear-america-a-twin-map",
+            title: $('<textarea/>').html("&quot;Dear America&quot; - A Twin Map Trailer").val(),
+            start: "",
+            end: "",
+            url: "/event/349826-dear-america-a-twin-map",
+            allDay: false
+          }, 
+        
+          {
+            id: "349411-dear-america-a-twin-maps",
+            title: $('<textarea/>').html("&quot;Dear America&quot; - A Twin Maps Trailer").val(),
+            start: "",
+            end: "",
+            url: "/event/349411-dear-america-a-twin-maps",
+            allDay: false
+          }, 
+        
+          {
+            id: "344325-cj-and-joey",
+            title: $('<textarea/>').html("CJ and Joey").val(),
+            start: "",
+            end: "",
+            url: "/event/344325-cj-and-joey",
+            allDay: false
+          }, 
+        
+          {
+            id: "336495-disaster-recovery-project-nashville-tn",
+            title: $('<textarea/>').html("Disaster Recovery Project: Nashville, TN").val(),
+            start: "",
+            end: "",
+            url: "/event/336495-disaster-recovery-project-nashville-tn",
+            allDay: false
+          }, 
+        
+          {
+            id: "336494-church-world-service-lancaster-pa",
+            title: $('<textarea/>').html("Church World Service: Lancaster, PA").val(),
+            start: "",
+            end: "",
+            url: "/event/336494-church-world-service-lancaster-pa",
+            allDay: false
+          }, 
+        
+          {
+            id: "336493-disc-golf",
+            title: $('<textarea/>').html("Disc Golf").val(),
+            start: "",
+            end: "",
+            url: "/event/336493-disc-golf",
+            allDay: false
+          }, 
+        
+          {
+            id: "336492-it-s-haircut-time",
+            title: $('<textarea/>').html("It's Haircut Time!").val(),
+            start: "",
+            end: "",
+            url: "/event/336492-it-s-haircut-time",
+            allDay: false
+          }, 
+        
+          {
+            id: "331380-back-bay-mission",
+            title: $('<textarea/>').html("Back Bay Mission").val(),
+            start: "",
+            end: "",
+            url: "/event/331380-back-bay-mission",
+            allDay: false
+          }, 
+        
+          {
+            id: "331345-biloxi-back-bay-mission-and-katrina",
+            title: $('<textarea/>').html("Biloxi, Back Bay Mission, and Katrina").val(),
+            start: "",
+            end: "",
+            url: "/event/331345-biloxi-back-bay-mission-and-katrina",
+            allDay: false
+          }, 
+        
+          {
+            id: "326547-twin-maps-podcast-for-5-5-2011",
+            title: $('<textarea/>').html("Twin Maps Podcast for 5-5-2011").val(),
+            start: "",
+            end: "",
+            url: "/event/326547-twin-maps-podcast-for-5-5-2011",
+            allDay: false
+          }, 
+        
+          {
+            id: "319689-toksa-saying-good-bye-to-re-member",
+            title: $('<textarea/>').html("Toksa: Saying Good-Bye to Re-Member").val(),
+            start: "",
+            end: "",
+            url: "/event/319689-toksa-saying-good-bye-to-re-member",
+            allDay: false
+          }, 
+        
+          {
+            id: "313234-join",
+            title: $('<textarea/>').html("Join").val(),
+            start: "",
+            end: "",
+            url: "/event/313234-join",
+            allDay: false
+          }, 
+        
+          {
+            id: "313236-pilgrim-firs-conference-center",
+            title: $('<textarea/>').html("Pilgrim Firs Conference Center").val(),
+            start: "",
+            end: "",
+            url: "/event/313236-pilgrim-firs-conference-center",
+            allDay: false
+          }, 
+        
+          {
+            id: "313237-re-member",
+            title: $('<textarea/>').html("Re-Member").val(),
+            start: "",
+            end: "",
+            url: "/event/313237-re-member",
+            allDay: false
+          }, 
+        
+          {
+            id: "312865-mitakuye-oyasin-paying-our-respects-at",
+            title: $('<textarea/>').html("Mitakuye Oyasin: Paying our Respects at Wounded Knee").val(),
+            start: "",
+            end: "",
+            url: "/event/312865-mitakuye-oyasin-paying-our-respects-at",
+            allDay: false
+          }, 
+        
+          {
+            id: "307554-washington-and-south-dakota-are-not",
+            title: $('<textarea/>').html("Washington and South Dakota are not close to each other").val(),
+            start: "",
+            end: "",
+            url: "/event/307554-washington-and-south-dakota-are-not",
+            allDay: false
+          }, 
+        
+          {
+            id: "304538-the-disaster-recovery-project-feature-is",
+            title: $('<textarea/>').html("The Disaster Recovery Project Feature is Posted!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/304538-the-disaster-recovery-project-feature-is",
+            allDay: false
+          }, 
+        
+          {
+            id: "297304-the-top-ten-things-we-ve-learned",
+            title: $('<textarea/>').html("The Top Ten Things We've Learned Since Starting Twin Maps").val(),
+            start: "",
+            end: "",
+            url: "/event/297304-the-top-ten-things-we-ve-learned",
+            allDay: false
+          }, 
+        
+          {
+            id: "285546-church-world-service-feature",
+            title: $('<textarea/>').html("Church World Service Feature!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/285546-church-world-service-feature",
+            allDay: false
+          }, 
+        
+          {
+            id: "275299-the-crest-of-the-u-turn",
+            title: $('<textarea/>').html("The Crest of the U-Turn").val(),
+            start: "",
+            end: "",
+            url: "/event/275299-the-crest-of-the-u-turn",
+            allDay: false
+          }, 
+        
+          {
+            id: "272486-weddings-in-a-doughnut-shop",
+            title: $('<textarea/>').html("Weddings in a Doughnut Shop").val(),
+            start: "",
+            end: "",
+            url: "/event/272486-weddings-in-a-doughnut-shop",
+            allDay: false
+          }, 
+        
+          {
+            id: "269760-late-night-mission-and-daily-growth",
+            title: $('<textarea/>').html("Late Night Mission and Daily Growth in Portland, OR").val(),
+            start: "",
+            end: "",
+            url: "/event/269760-late-night-mission-and-daily-growth",
+            allDay: false
+          }, 
+        
+          {
+            id: "262958-pilgrim-ucc-and-a-future-yasc",
+            title: $('<textarea/>').html("Pilgrim UCC and a Future YASC Site").val(),
+            start: "",
+            end: "",
+            url: "/event/262958-pilgrim-ucc-and-a-future-yasc",
+            allDay: false
+          }, 
+        
+          {
+            id: "269263-pilgrim-ucc",
+            title: $('<textarea/>').html("Pilgrim UCC").val(),
+            start: "",
+            end: "",
+            url: "/event/269263-pilgrim-ucc",
+            allDay: false
+          }, 
+        
+          {
+            id: "266631-city-of-refuge",
+            title: $('<textarea/>').html("City of Refuge").val(),
+            start: "",
+            end: "",
+            url: "/event/266631-city-of-refuge",
+            allDay: false
+          }, 
+        
+          {
+            id: "266242-a-visit-with-city-of-refuge",
+            title: $('<textarea/>').html("A Visit with City of Refuge UCC").val(),
+            start: "",
+            end: "",
+            url: "/event/266242-a-visit-with-city-of-refuge",
+            allDay: false
+          }, 
+        
+          {
+            id: "264524-centro-romero",
+            title: $('<textarea/>').html("Centro Romero").val(),
+            start: "",
+            end: "",
+            url: "/event/264524-centro-romero",
+            allDay: false
+          }, 
+        
+          {
+            id: "263773-los-angeles-fresno-and-san-francisco",
+            title: $('<textarea/>').html("Los Angeles, Fresno, and San Francisco, OH MY!").val(),
+            start: "",
+            end: "",
+            url: "/event/263773-los-angeles-fresno-and-san-francisco",
+            allDay: false
+          }, 
+        
+          {
+            id: "259974-reflections-and-fish-tacos",
+            title: $('<textarea/>').html("Reflections and Fish Tacos").val(),
+            start: "",
+            end: "",
+            url: "/event/259974-reflections-and-fish-tacos",
+            allDay: false
+          }, 
+        
+          {
+            id: "256827-shanty-towns-smoke-and-toxic-water",
+            title: $('<textarea/>').html("Shanty Towns, Smoke, and Toxic Water").val(),
+            start: "",
+            end: "",
+            url: "/event/256827-shanty-towns-smoke-and-toxic-water",
+            allDay: false
+          }, 
+        
+          {
+            id: "255945-san-ysidro-day-1-we-get",
+            title: $('<textarea/>').html("San Ysidro: Day 1. We get kicked out of a strip mall. ").val(),
+            start: "",
+            end: "",
+            url: "/event/255945-san-ysidro-day-1-we-get",
+            allDay: false
+          }, 
+        
+          {
+            id: "254068-mid-year-retreat-gaining-brothers-and-sisters",
+            title: $('<textarea/>').html("Mid-Year Retreat: Gaining Brothers and Sisters from all walks of Life").val(),
+            start: "",
+            end: "",
+            url: "/event/254068-mid-year-retreat-gaining-brothers-and-sisters",
+            allDay: false
+          }, 
+        
+          {
+            id: "248867-family-friends-and-super-bowl-sunday",
+            title: $('<textarea/>').html("Family, Friends, and Super Bowl Sunday").val(),
+            start: "",
+            end: "",
+            url: "/event/248867-family-friends-and-super-bowl-sunday",
+            allDay: false
+          }, 
+        
+          {
+            id: "242923-haircut-and-super-bowl-picks",
+            title: $('<textarea/>').html("Haircut and Super Bowl Picks").val(),
+            start: "",
+            end: "",
+            url: "/event/242923-haircut-and-super-bowl-picks",
+            allDay: false
+          }, 
+        
+          {
+            id: "240213-southern-arizona-wrap-up",
+            title: $('<textarea/>').html("Southern Arizona Wrap Up").val(),
+            start: "",
+            end: "",
+            url: "/event/240213-southern-arizona-wrap-up",
+            allDay: false
+          }, 
+        
+          {
+            id: "238377-ysop-feature-posted",
+            title: $('<textarea/>').html("YSOP Feature Posted!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/238377-ysop-feature-posted",
+            allDay: false
+          }, 
+        
+          {
+            id: "238734-gould-farm",
+            title: $('<textarea/>').html("Gould Farm").val(),
+            start: "",
+            end: "",
+            url: "/event/238734-gould-farm",
+            allDay: false
+          }, 
+        
+          {
+            id: "238735-ysop",
+            title: $('<textarea/>').html("YSOP").val(),
+            start: "",
+            end: "",
+            url: "/event/238735-ysop",
+            allDay: false
+          }, 
+        
+          {
+            id: "238344-gould-farm-feature",
+            title: $('<textarea/>').html("Gould Farm Feature").val(),
+            start: "",
+            end: "",
+            url: "/event/238344-gould-farm-feature",
+            allDay: false
+          }, 
+        
+          {
+            id: "237531-border-links",
+            title: $('<textarea/>').html("Border Links").val(),
+            start: "",
+            end: "",
+            url: "/event/237531-border-links",
+            allDay: false
+          }, 
+        
+          {
+            id: "237533-good-shepherd-ucc",
+            title: $('<textarea/>').html("Good Shepherd UCC").val(),
+            start: "",
+            end: "",
+            url: "/event/237533-good-shepherd-ucc",
+            allDay: false
+          }, 
+        
+          {
+            id: "237118-a-tale-for-the-ages-how",
+            title: $('<textarea/>').html("A Tale for the Ages: How a Migrant made it to the US and exposes the dark side of Immigration Policy").val(),
+            start: "",
+            end: "",
+            url: "/event/237118-a-tale-for-the-ages-how",
+            allDay: false
+          }, 
+        
+          {
+            id: "234647-water-barrels-blue-flags-and-wet",
+            title: $('<textarea/>').html("Water Barrels, Blue Flags, and Wet Desert").val(),
+            start: "",
+            end: "",
+            url: "/event/234647-water-barrels-blue-flags-and-wet",
+            allDay: false
+          }, 
+        
+          {
+            id: "231444-a-day-in-mexico-part-1",
+            title: $('<textarea/>').html("A Day In Mexico: Part 1").val(),
+            start: "",
+            end: "",
+            url: "/event/231444-a-day-in-mexico-part-1",
+            allDay: false
+          }, 
+        
+          {
+            id: "229765-in-memoriam-tucson-representative-giffords-and",
+            title: $('<textarea/>').html("In Memoriam: Tucson, Representative Giffords, and those who lost their lives in this Tragedy").val(),
+            start: "",
+            end: "",
+            url: "/event/229765-in-memoriam-tucson-representative-giffords-and",
+            allDay: false
+          }, 
+        
+          {
+            id: "228953-arriving-in-sahuarita-getting-adjusted-and",
+            title: $('<textarea/>').html("Arriving in Sahuarita, Getting adjusted, and back to WORK! ").val(),
+            start: "",
+            end: "",
+            url: "/event/228953-arriving-in-sahuarita-getting-adjusted-and",
+            allDay: false
+          }, 
+        
+          {
+            id: "228954-arriving-in-sahuarita-getting-adjusted-and",
+            title: $('<textarea/>').html("Arriving in Sahuarita, Getting adjusted, and back to WORK! ").val(),
+            start: "",
+            end: "",
+            url: "/event/228954-arriving-in-sahuarita-getting-adjusted-and",
+            allDay: false
+          }, 
+        
+          {
+            id: "224923-day-3-of-travels-fort-smith",
+            title: $('<textarea/>').html("Day 3 of Travels: Fort Smith, Arkansas").val(),
+            start: "",
+            end: "",
+            url: "/event/224923-day-3-of-travels-fort-smith",
+            allDay: false
+          }, 
+        
+          {
+            id: "222495-go-west-young-man",
+            title: $('<textarea/>').html("Go West, Young Man.").val(),
+            start: "",
+            end: "",
+            url: "/event/222495-go-west-young-man",
+            allDay: false
+          }, 
+        
+          {
+            id: "222142-ucan-asc",
+            title: $('<textarea/>').html("UCAN/ASC").val(),
+            start: "",
+            end: "",
+            url: "/event/222142-ucan-asc",
+            allDay: false
+          }, 
+        
+          {
+            id: "219404-tampa-bay-florida",
+            title: $('<textarea/>').html("Tampa Bay, Florida").val(),
+            start: "2011-07-01",
+            end: "2011-07-05",
+            url: "/event/219404-tampa-bay-florida",
+            allDay: false
+          }, 
+        
+          {
+            id: "219403-new-orleans-louisiana",
+            title: $('<textarea/>').html("New Orleans, Louisiana").val(),
+            start: "2011-06-01",
+            end: "2011-06-18",
+            url: "/event/219403-new-orleans-louisiana",
+            allDay: false
+          }, 
+        
+          {
+            id: "219402-biloxi-mississippi",
+            title: $('<textarea/>').html("Biloxi, Mississippi").val(),
+            start: "2011-05-01",
+            end: "2011-05-31",
+            url: "/event/219402-biloxi-mississippi",
+            allDay: false
+          }, 
+        
+          {
+            id: "219401-louisville-kentucky",
+            title: $('<textarea/>').html("Louisville, Kentucky").val(),
+            start: "2011-04-26",
+            end: "2011-04-30",
+            url: "/event/219401-louisville-kentucky",
+            allDay: false
+          }, 
+        
+          {
+            id: "219400-rockford-illinois",
+            title: $('<textarea/>').html("Rockford, Illinois").val(),
+            start: "2011-04-22",
+            end: "2011-04-25",
+            url: "/event/219400-rockford-illinois",
+            allDay: false
+          }, 
+        
+          {
+            id: "219399-monticello-iowa",
+            title: $('<textarea/>').html("Monticello, Iowa").val(),
+            start: "2011-04-18",
+            end: "2011-04-21",
+            url: "/event/219399-monticello-iowa",
+            allDay: false
+          }, 
+        
+          {
+            id: "219398-lincoln-nebraska",
+            title: $('<textarea/>').html("Lincoln, Nebraska").val(),
+            start: "2011-04-14",
+            end: "2011-04-17",
+            url: "/event/219398-lincoln-nebraska",
+            allDay: false
+          }, 
+        
+          {
+            id: "219397-pine-ridge-south-dakota",
+            title: $('<textarea/>').html("Pine Ridge, South Dakota").val(),
+            start: "2011-04-09",
+            end: "2011-04-13",
+            url: "/event/219397-pine-ridge-south-dakota",
+            allDay: false
+          }, 
+        
+          {
+            id: "219396-white-swan-washington",
+            title: $('<textarea/>').html("White Swan, Washington").val(),
+            start: "2011-04-04",
+            end: "2011-04-08",
+            url: "/event/219396-white-swan-washington",
+            allDay: false
+          }, 
+        
+          {
+            id: "219395-break",
+            title: $('<textarea/>').html("Break").val(),
+            start: "2011-03-19",
+            end: "2011-04-03",
+            url: "/event/219395-break",
+            allDay: false
+          }, 
+        
+          {
+            id: "219394-seattle-washington",
+            title: $('<textarea/>').html("Seattle, Washington").val(),
+            start: "2011-03-12",
+            end: "2011-03-18",
+            url: "/event/219394-seattle-washington",
+            allDay: false
+          }, 
+        
+          {
+            id: "219393-port-orchard-washington",
+            title: $('<textarea/>').html("Port Orchard, Washington").val(),
+            start: "2011-03-06",
+            end: "2011-03-12",
+            url: "/event/219393-port-orchard-washington",
+            allDay: false
+          }, 
+        
+          {
+            id: "219392-portland-oregon",
+            title: $('<textarea/>').html("Portland, Oregon").val(),
+            start: "2011-02-26",
+            end: "2011-03-05",
+            url: "/event/219392-portland-oregon",
+            allDay: false
+          }, 
+        
+          {
+            id: "219391-ceres-california",
+            title: $('<textarea/>').html("Ceres, California").val(),
+            start: "2011-02-21",
+            end: "2011-02-26",
+            url: "/event/219391-ceres-california",
+            allDay: false
+          }, 
+        
+          {
+            id: "219390-carlsbad-california",
+            title: $('<textarea/>').html("Carlsbad, California").val(),
+            start: "2011-02-18",
+            end: "2011-02-21",
+            url: "/event/219390-carlsbad-california",
+            allDay: false
+          }, 
+        
+          {
+            id: "219389-san-ysidro-california",
+            title: $('<textarea/>').html("San Ysidro, California").val(),
+            start: "2011-02-14",
+            end: "2011-02-18",
+            url: "/event/219389-san-ysidro-california",
+            allDay: false
+          }, 
+        
+          {
+            id: "219388-san-antonio-texas",
+            title: $('<textarea/>').html("San Antonio, Texas").val(),
+            start: "2011-02-09",
+            end: "2011-02-13",
+            url: "/event/219388-san-antonio-texas",
+            allDay: false
+          }, 
+        
+          {
+            id: "219387-phoenix-arizona",
+            title: $('<textarea/>').html("Phoenix, Arizona").val(),
+            start: "2011-01-30",
+            end: "2011-02-08",
+            url: "/event/219387-phoenix-arizona",
+            allDay: false
+          }, 
+        
+          {
+            id: "219386-tuscon-arizona",
+            title: $('<textarea/>').html("Tuscon, Arizona").val(),
+            start: "2011-01-13",
+            end: "2011-01-29",
+            url: "/event/219386-tuscon-arizona",
+            allDay: false
+          }, 
+        
+          {
+            id: "219383-amarillo-tx",
+            title: $('<textarea/>').html("Amarillo, TX").val(),
+            start: "2011-01-12",
+            end: "2011-01-13",
+            url: "/event/219383-amarillo-tx",
+            allDay: false
+          }, 
+        
+          {
+            id: "219382-perryville-arkansas",
+            title: $('<textarea/>').html("Perryville, Arkansas").val(),
+            start: "2011-01-10",
+            end: "2011-01-12",
+            url: "/event/219382-perryville-arkansas",
+            allDay: false
+          }, 
+        
+          {
+            id: "219381-nashville-tennessee",
+            title: $('<textarea/>').html("Nashville, Tennessee").val(),
+            start: "2011-01-09",
+            end: "2011-01-10",
+            url: "/event/219381-nashville-tennessee",
+            allDay: false
+          }, 
+        
+          {
+            id: "211574-ucan-asc-feature",
+            title: $('<textarea/>').html("UCAN/ASC Feature!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/211574-ucan-asc-feature",
+            allDay: false
+          }, 
+        
+          {
+            id: "205206-reflections-part-1",
+            title: $('<textarea/>').html("Reflections Part 1").val(),
+            start: "",
+            end: "",
+            url: "/event/205206-reflections-part-1",
+            allDay: false
+          }, 
+        
+          {
+            id: "201855-nashville-wrap-up",
+            title: $('<textarea/>').html("Nashville Wrap Up").val(),
+            start: "",
+            end: "",
+            url: "/event/201855-nashville-wrap-up",
+            allDay: false
+          }, 
+        
+          {
+            id: "199210-the-flood-comes",
+            title: $('<textarea/>').html("The Flood Comes...").val(),
+            start: "",
+            end: "",
+            url: "/event/199210-the-flood-comes",
+            allDay: false
+          }, 
+        
+          {
+            id: "198387-a-day-in-the-life-of",
+            title: $('<textarea/>').html("A day in the life of Flood Recovery").val(),
+            start: "",
+            end: "",
+            url: "/event/198387-a-day-in-the-life-of",
+            allDay: false
+          }, 
+        
+          {
+            id: "196924-the-great-nashville-flood-of-2010",
+            title: $('<textarea/>').html("The Great Nashville Flood of 2010").val(),
+            start: "",
+            end: "",
+            url: "/event/196924-the-great-nashville-flood-of-2010",
+            allDay: false
+          }, 
+        
+          {
+            id: "196922-disaster-recovery-project",
+            title: $('<textarea/>').html("Disaster Recovery Project").val(),
+            start: "",
+            end: "",
+            url: "/event/196922-disaster-recovery-project",
+            allDay: false
+          }, 
+        
+          {
+            id: "196188-who-has-more-energy-a-22",
+            title: $('<textarea/>').html("Who has more energy, a 22 year old or a 73 year old?").val(),
+            start: "",
+            end: "",
+            url: "/event/196188-who-has-more-energy-a-22",
+            allDay: false
+          }, 
+        
+          {
+            id: "192617-twin-maps-arrives-in-north-carolina",
+            title: $('<textarea/>').html("Twin Maps arrives in North Carolina, Abernathy Laurels").val(),
+            start: "",
+            end: "",
+            url: "/event/192617-twin-maps-arrives-in-north-carolina",
+            allDay: false
+          }, 
+        
+          {
+            id: "192273-the-turkey-bowl-how-a-family",
+            title: $('<textarea/>').html("The Turkey Bowl: How a Family Tradition has become the most important event in the World").val(),
+            start: "",
+            end: "",
+            url: "/event/192273-the-turkey-bowl-how-a-family",
+            allDay: false
+          }, 
+        
+          {
+            id: "188070-christ-house-video",
+            title: $('<textarea/>').html("Christ House Video!!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/188070-christ-house-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "188063-christ-house",
+            title: $('<textarea/>').html("Christ House").val(),
+            start: "",
+            end: "",
+            url: "/event/188063-christ-house",
+            allDay: false
+          }, 
+        
+          {
+            id: "188064-christ-house",
+            title: $('<textarea/>').html("Christ House").val(),
+            start: "",
+            end: "",
+            url: "/event/188064-christ-house",
+            allDay: false
+          }, 
+        
+          {
+            id: "183203-detour-in-the-trip-leads-to",
+            title: $('<textarea/>').html("Detour in the Trip Leads to a Reunion ").val(),
+            start: "",
+            end: "",
+            url: "/event/183203-detour-in-the-trip-leads-to",
+            allDay: false
+          }, 
+        
+          {
+            id: "181627-neighborhood-houses",
+            title: $('<textarea/>').html("Neighborhood Houses").val(),
+            start: "",
+            end: "",
+            url: "/event/181627-neighborhood-houses",
+            allDay: false
+          }, 
+        
+          {
+            id: "181619-a-walk-around-south-st-louis",
+            title: $('<textarea/>').html("A walk around south St. Louis").val(),
+            start: "",
+            end: "",
+            url: "/event/181619-a-walk-around-south-st-louis",
+            allDay: false
+          }, 
+        
+          {
+            id: "181276-twin-maps-talk-to-youth-and",
+            title: $('<textarea/>').html("Twin Maps talk to Youth and posts a Bonus Video").val(),
+            start: "",
+            end: "",
+            url: "/event/181276-twin-maps-talk-to-youth-and",
+            allDay: false
+          }, 
+        
+          {
+            id: "179775-st-louis-is-named-after-saint",
+            title: $('<textarea/>').html("St. Louis is named after Saint Maximus Ricardo").val(),
+            start: "",
+            end: "",
+            url: "/event/179775-st-louis-is-named-after-saint",
+            allDay: false
+          }, 
+        
+          {
+            id: "177626-picture-dump-and-twin-maps-gets",
+            title: $('<textarea/>').html("Picture Dump and Twin Maps gets good news ").val(),
+            start: "",
+            end: "",
+            url: "/event/177626-picture-dump-and-twin-maps-gets",
+            allDay: false
+          }, 
+        
+          {
+            id: "176863-our-tale-of-st-louis-arrival",
+            title: $('<textarea/>').html("Our tale of St. Louis arrival continues!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/176863-our-tale-of-st-louis-arrival",
+            allDay: false
+          }, 
+        
+          {
+            id: "176105-st-louis-is-very-far-away",
+            title: $('<textarea/>').html("St. Louis is very far away. ").val(),
+            start: "",
+            end: "",
+            url: "/event/176105-st-louis-is-very-far-away",
+            allDay: false
+          }, 
+        
+          {
+            id: "176090-music-video",
+            title: $('<textarea/>').html("Music Video ").val(),
+            start: "",
+            end: "",
+            url: "/event/176090-music-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "176095-evangelical-children-s-home",
+            title: $('<textarea/>').html("Evangelical Children's Home").val(),
+            start: "",
+            end: "",
+            url: "/event/176095-evangelical-children-s-home",
+            allDay: false
+          }, 
+        
+          {
+            id: "172311-picture-time-from-philadelphia",
+            title: $('<textarea/>').html("Picture Time from Philadelphia!").val(),
+            start: "",
+            end: "",
+            url: "/event/172311-picture-time-from-philadelphia",
+            allDay: false
+          }, 
+        
+          {
+            id: "170802-go-vote-go-vote-go-vote",
+            title: $('<textarea/>').html("GO VOTE. GO VOTE. GO VOTE. ").val(),
+            start: "",
+            end: "",
+            url: "/event/170802-go-vote-go-vote-go-vote",
+            allDay: false
+          }, 
+        
+          {
+            id: "168936-church-world-service-lancaster",
+            title: $('<textarea/>').html("Church World Service - Lancaster").val(),
+            start: "",
+            end: "",
+            url: "/event/168936-church-world-service-lancaster",
+            allDay: false
+          }, 
+        
+          {
+            id: "168931-how-nepalese-tea-brought-us-inner",
+            title: $('<textarea/>').html("How Nepalese Tea brought us Inner Peace").val(),
+            start: "",
+            end: "",
+            url: "/event/168931-how-nepalese-tea-brought-us-inner",
+            allDay: false
+          }, 
+        
+          {
+            id: "167459-westmoreland-volunteer-corps-video",
+            title: $('<textarea/>').html("Westmoreland Volunteer Corps Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/167459-westmoreland-volunteer-corps-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "167462-westmoreland-volunteer-corp",
+            title: $('<textarea/>').html("Westmoreland Volunteer Corp").val(),
+            start: "",
+            end: "",
+            url: "/event/167462-westmoreland-volunteer-corp",
+            allDay: false
+          }, 
+        
+          {
+            id: "167070-morning-update",
+            title: $('<textarea/>').html("Morning Update!").val(),
+            start: "",
+            end: "",
+            url: "/event/167070-morning-update",
+            allDay: false
+          }, 
+        
+          {
+            id: "165394-we-love-the-smell-of-cow",
+            title: $('<textarea/>').html("We love the smell of cow manure in the morning!").val(),
+            start: "",
+            end: "",
+            url: "/event/165394-we-love-the-smell-of-cow",
+            allDay: false
+          }, 
+        
+          {
+            id: "164587-comfort-support-and-triumph-twin-maps",
+            title: $('<textarea/>').html("Comfort, Support, and Triumph: Twin Maps goes to Coffeehouse").val(),
+            start: "",
+            end: "",
+            url: "/event/164587-comfort-support-and-triumph-twin-maps",
+            allDay: false
+          }, 
+        
+          {
+            id: "164174-you-re-barefoot-in-45-degree-weather",
+            title: $('<textarea/>').html("You're barefoot in 45 degree weather???").val(),
+            start: "",
+            end: "",
+            url: "/event/164174-you-re-barefoot-in-45-degree-weather",
+            allDay: false
+          }, 
+        
+          {
+            id: "163964-panera-bread-is-kicking-us-out",
+            title: $('<textarea/>').html("Panera Bread is kicking us out right now").val(),
+            start: "",
+            end: "",
+            url: "/event/163964-panera-bread-is-kicking-us-out",
+            allDay: false
+          }, 
+        
+          {
+            id: "163556-probably-shouldn-t-have-worn-tennis-shoes",
+            title: $('<textarea/>').html("Probably shouldn't have worn tennis shoes on the farm today...").val(),
+            start: "",
+            end: "",
+            url: "/event/163556-probably-shouldn-t-have-worn-tennis-shoes",
+            allDay: false
+          }, 
+        
+          {
+            id: "163380-for-everything-there-is-a-season",
+            title: $('<textarea/>').html("For everything there is a season...").val(),
+            start: "",
+            end: "",
+            url: "/event/163380-for-everything-there-is-a-season",
+            allDay: false
+          }, 
+        
+          {
+            id: "163381-heifer-learning-center",
+            title: $('<textarea/>').html("Heifer Learning Center").val(),
+            start: "",
+            end: "",
+            url: "/event/163381-heifer-learning-center",
+            allDay: false
+          }, 
+        
+          {
+            id: "162984-can-we-become-the-emperors-of",
+            title: $('<textarea/>').html("Can we become the Emperors of the Empire State? ").val(),
+            start: "",
+            end: "",
+            url: "/event/162984-can-we-become-the-emperors-of",
+            allDay: false
+          }, 
+        
+          {
+            id: "162642-meeting-ground-video",
+            title: $('<textarea/>').html("Meeting Ground Video").val(),
+            start: "",
+            end: "",
+            url: "/event/162642-meeting-ground-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "162637-meeting-ground-video",
+            title: $('<textarea/>').html("Meeting Ground Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/162637-meeting-ground-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "162149-350-fine-for-honking",
+            title: $('<textarea/>').html("$350 Fine for Honking").val(),
+            start: "",
+            end: "",
+            url: "/event/162149-350-fine-for-honking",
+            allDay: false
+          }, 
+        
+          {
+            id: "162037-transformers-3-and-twin-maps",
+            title: $('<textarea/>').html("Transformers 3 and Twin Maps").val(),
+            start: "",
+            end: "",
+            url: "/event/162037-transformers-3-and-twin-maps",
+            allDay: false
+          }, 
+        
+          {
+            id: "161373-traffic-in-dc-is-almost-as",
+            title: $('<textarea/>').html("Traffic in DC is almost as bad as Parking in DC").val(),
+            start: "",
+            end: "",
+            url: "/event/161373-traffic-in-dc-is-almost-as",
+            allDay: false
+          }, 
+        
+          {
+            id: "160825-bethesda-dc-it-s-the-same-thing",
+            title: $('<textarea/>').html("Bethesda, DC, it's the same thing, right?").val(),
+            start: "",
+            end: "",
+            url: "/event/160825-bethesda-dc-it-s-the-same-thing",
+            allDay: false
+          }, 
+        
+          {
+            id: "160714-appalachian-south-folk-life-center",
+            title: $('<textarea/>').html("Appalachian South Folk Life Center").val(),
+            start: "",
+            end: "",
+            url: "/event/160714-appalachian-south-folk-life-center",
+            allDay: false
+          }, 
+        
+          {
+            id: "160361-hiram-farms-video",
+            title: $('<textarea/>').html("Hiram Farms Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/160361-hiram-farms-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "160363-hiram-farms-video",
+            title: $('<textarea/>').html("Hiram Farms Video").val(),
+            start: "",
+            end: "",
+            url: "/event/160363-hiram-farms-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "160309-meeting-ground-wrap-up-and-arrival",
+            title: $('<textarea/>').html("Meeting Ground Wrap Up and Arrival in Bethesda, Maryland").val(),
+            start: "",
+            end: "",
+            url: "/event/160309-meeting-ground-wrap-up-and-arrival",
+            allDay: false
+          }, 
+        
+          {
+            id: "159957-clairvaux-and-baltimore-city-schools",
+            title: $('<textarea/>').html("Clairvaux and Baltimore City Schools").val(),
+            start: "",
+            end: "",
+            url: "/event/159957-clairvaux-and-baltimore-city-schools",
+            allDay: false
+          }, 
+        
+          {
+            id: "159544-interreligious-task-force",
+            title: $('<textarea/>').html("Interreligious Task Force").val(),
+            start: "",
+            end: "",
+            url: "/event/159544-interreligious-task-force",
+            allDay: false
+          }, 
+        
+          {
+            id: "159495-interreligious-task-force-on-central-america",
+            title: $('<textarea/>').html("InterReligious Task Force on Central America Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/159495-interreligious-task-force-on-central-america",
+            allDay: false
+          }, 
+        
+          {
+            id: "158084-destination-baltimore",
+            title: $('<textarea/>').html("Destination: Baltimore").val(),
+            start: "",
+            end: "",
+            url: "/event/158084-destination-baltimore",
+            allDay: false
+          }, 
+        
+          {
+            id: "157992-urban-immersion-video",
+            title: $('<textarea/>').html("Urban Immersion Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/157992-urban-immersion-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "157995-urban-immersion",
+            title: $('<textarea/>').html("Urban Immersion").val(),
+            start: "",
+            end: "",
+            url: "/event/157995-urban-immersion",
+            allDay: false
+          }, 
+        
+          {
+            id: "141319-arrival-in-pipestem-west-virginia",
+            title: $('<textarea/>').html("Arrival in Pipestem, West Virginia").val(),
+            start: "",
+            end: "",
+            url: "/event/141319-arrival-in-pipestem-west-virginia",
+            allDay: false
+          }, 
+        
+          {
+            id: "141205-the-decision",
+            title: $('<textarea/>').html("THE DECISION").val(),
+            start: "",
+            end: "",
+            url: "/event/141205-the-decision",
+            allDay: false
+          }, 
+        
+          {
+            id: "141161-the-decision",
+            title: $('<textarea/>').html("THE DECISION").val(),
+            start: "",
+            end: "",
+            url: "/event/141161-the-decision",
+            allDay: false
+          }, 
+        
+          {
+            id: "140861-in-memoriam-kent-state",
+            title: $('<textarea/>').html("In Memoriam: Kent State").val(),
+            start: "",
+            end: "",
+            url: "/event/140861-in-memoriam-kent-state",
+            allDay: false
+          }, 
+        
+          {
+            id: "140729-arrival-in-kent-ohio",
+            title: $('<textarea/>').html("Arrival in Kent, Ohio").val(),
+            start: "",
+            end: "",
+            url: "/event/140729-arrival-in-kent-ohio",
+            allDay: false
+          }, 
+        
+          {
+            id: "140672-lesson-learned",
+            title: $('<textarea/>').html("Lesson Learned").val(),
+            start: "",
+            end: "",
+            url: "/event/140672-lesson-learned",
+            allDay: false
+          }, 
+        
+          {
+            id: "140470-hopewell-farms-video",
+            title: $('<textarea/>').html("Hopewell Farms Video!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/140470-hopewell-farms-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "140619-hopewell-farms",
+            title: $('<textarea/>').html("Hopewell Farms").val(),
+            start: "",
+            end: "",
+            url: "/event/140619-hopewell-farms",
+            allDay: false
+          }, 
+        
+          {
+            id: "140332-first-impressions",
+            title: $('<textarea/>').html("First Impressions").val(),
+            start: "",
+            end: "",
+            url: "/event/140332-first-impressions",
+            allDay: false
+          }, 
+        
+          {
+            id: "140008-not-your-usual-update",
+            title: $('<textarea/>').html("Not your usual update...").val(),
+            start: "",
+            end: "",
+            url: "/event/140008-not-your-usual-update",
+            allDay: false
+          }, 
+        
+          {
+            id: "139902-baby-chick",
+            title: $('<textarea/>').html("Baby Chick").val(),
+            start: "",
+            end: "",
+            url: "/event/139902-baby-chick",
+            allDay: false
+          }, 
+        
+          {
+            id: "139706-columbus-and-editing-days",
+            title: $('<textarea/>').html("Columbus and Editing Days").val(),
+            start: "",
+            end: "",
+            url: "/event/139706-columbus-and-editing-days",
+            allDay: false
+          }, 
+        
+          {
+            id: "139601-orientation-and-hopewell-farms",
+            title: $('<textarea/>').html("Orientation and Hopewell Farms!").val(),
+            start: "",
+            end: "",
+            url: "/event/139601-orientation-and-hopewell-farms",
+            allDay: false
+          }, 
+        
+          {
+            id: "140686-hopewell-farms-filming",
+            title: $('<textarea/>').html("Hopewell Farms Filming").val(),
+            start: "2010-09-10",
+            end: "2010-09-10",
+            url: "/event/140686-hopewell-farms-filming",
+            allDay: false
+          }, 
+        
+          {
+            id: "139283-arrival-in-cleveland",
+            title: $('<textarea/>').html("Arrival in Cleveland").val(),
+            start: "",
+            end: "",
+            url: "/event/139283-arrival-in-cleveland",
+            allDay: false
+          }, 
+        
+          {
+            id: "134069-group-workcamp-video",
+            title: $('<textarea/>').html("Group Workcamp Video").val(),
+            start: "",
+            end: "",
+            url: "/event/134069-group-workcamp-video",
+            allDay: false
+          }, 
+        
+          {
+            id: "134066-group-work-camp",
+            title: $('<textarea/>').html("Group Work Camp").val(),
+            start: "",
+            end: "",
+            url: "/event/134066-group-work-camp",
+            allDay: false
+          }, 
+        
+          {
+            id: "133017-westmoreland-volunteer-corp",
+            title: $('<textarea/>').html("Westmoreland Volunteer Corp").val(),
+            start: "",
+            end: "",
+            url: "/event/133017-westmoreland-volunteer-corp",
+            allDay: false
+          }, 
+        
+          {
+            id: "132517-new-york-new-york",
+            title: $('<textarea/>').html("New York, New York").val(),
+            start: "2010-10-12",
+            end: "2010-10-17",
+            url: "/event/132517-new-york-new-york",
+            allDay: false
+          }, 
+        
+          {
+            id: "132512-hiram-ohio",
+            title: $('<textarea/>').html("Hiram, Ohio").val(),
+            start: "2010-09-19",
+            end: "2010-09-22",
+            url: "/event/132512-hiram-ohio",
+            allDay: false
+          }, 
+        
+          {
+            id: "132477-interreligious-task-force-on-central-america",
+            title: $('<textarea/>').html("Interreligious Task Force on Central America").val(),
+            start: "",
+            end: "",
+            url: "/event/132477-interreligious-task-force-on-central-america",
+            allDay: false
+          }, 
+        
+          {
+            id: "132478-hiram-family-living",
+            title: $('<textarea/>').html("Hiram Family Living").val(),
+            start: "",
+            end: "",
+            url: "/event/132478-hiram-family-living",
+            allDay: false
+          }, 
+        
+          {
+            id: "132479-appalachian-south-folklife-center",
+            title: $('<textarea/>').html("Appalachian South Folklife Center").val(),
+            start: "",
+            end: "",
+            url: "/event/132479-appalachian-south-folklife-center",
+            allDay: false
+          }, 
+        
+          {
+            id: "132480-meeting-ground",
+            title: $('<textarea/>').html("Meeting Ground").val(),
+            start: "",
+            end: "",
+            url: "/event/132480-meeting-ground",
+            allDay: false
+          }, 
+        
+          {
+            id: "130023-article-about-twin-maps",
+            title: $('<textarea/>').html("Article about Twin Maps!!!").val(),
+            start: "",
+            end: "",
+            url: "/event/130023-article-about-twin-maps",
+            allDay: false
+          }, 
+        
+          {
+            id: "127152-stefani-singing",
+            title: $('<textarea/>').html("Stefani Singing").val(),
+            start: "",
+            end: "",
+            url: "/event/127152-stefani-singing",
+            allDay: false
+          }, 
+        
+          {
+            id: "121432-main-street-mission",
+            title: $('<textarea/>').html("Main Street Mission").val(),
+            start: "2010-07-21",
+            end: "2010-07-21",
+            url: "/event/121432-main-street-mission",
+            allDay: false
+          }, 
+        
+          {
+            id: "122703-msm",
+            title: $('<textarea/>').html("MSM").val(),
+            start: "2010-07-21",
+            end: "2010-07-21",
+            url: "/event/122703-msm",
+            allDay: false
+          }, 
+        
+          {
+            id: "119509-main-street-mission",
+            title: $('<textarea/>').html("Main Street Mission").val(),
+            start: "",
+            end: "",
+            url: "/event/119509-main-street-mission",
+            allDay: false
+          }, 
+        
+          {
+            id: "115862-whitakers-north-carolina",
+            title: $('<textarea/>').html("Whitakers North Carolina").val(),
+            start: "2010-12-19",
+            end: "2010-12-21",
+            url: "/event/115862-whitakers-north-carolina",
+            allDay: false
+          }, 
+        
+          {
+            id: "115861-winston-salem-north-carolina",
+            title: $('<textarea/>').html("Winston Salem, North Carolina").val(),
+            start: "2010-12-13",
+            end: "2010-12-17",
+            url: "/event/115861-winston-salem-north-carolina",
+            allDay: false
+          }, 
+        
+          {
+            id: "115860-newton-north-carolina",
+            title: $('<textarea/>').html("Newton, North Carolina").val(),
+            start: "2010-11-29",
+            end: "2010-12-02",
+            url: "/event/115860-newton-north-carolina",
+            allDay: false
+          }, 
+        
+          {
+            id: "115857-bethesda-maryland",
+            title: $('<textarea/>').html("Bethesda, Maryland").val(),
+            start: "2010-10-02",
+            end: "2010-10-05",
+            url: "/event/115857-bethesda-maryland",
+            allDay: false
+          }, 
+        
+          {
+            id: "109750-test-article",
+            title: $('<textarea/>').html("Test Article").val(),
+            start: "",
+            end: "",
+            url: "/event/109750-test-article",
+            allDay: false
+          }, 
+        
+          {
+            id: "108262-group-workcamp",
+            title: $('<textarea/>').html("Group Workcamp").val(),
+            start: "2010-06-20",
+            end: "2010-06-26",
+            url: "/event/108262-group-workcamp",
+            allDay: false
+          }, 
+        
+          {
+            id: "108028-thanksgiving",
+            title: $('<textarea/>').html("Thanksgiving").val(),
+            start: "2010-11-25",
+            end: "2010-11-25",
+            url: "/event/108028-thanksgiving",
+            allDay: false
+          }, 
+        
+          {
+            id: "108027-st-louis-missouri",
+            title: $('<textarea/>').html("St. Louis, Missouri").val(),
+            start: "2010-11-07",
+            end: "2010-11-16",
+            url: "/event/108027-st-louis-missouri",
+            allDay: false
+          }, 
+        
+          {
+            id: "108022-nashville-tennessee",
+            title: $('<textarea/>').html("Nashville, Tennessee").val(),
+            start: "2010-12-05",
+            end: "2010-12-10",
+            url: "/event/108022-nashville-tennessee",
+            allDay: false
+          }, 
+        
+          {
+            id: "108017-perryville-arkansas",
+            title: $('<textarea/>').html("Perryville, Arkansas").val(),
+            start: "2010-11-17",
+            end: "2010-11-20",
+            url: "/event/108017-perryville-arkansas",
+            allDay: false
+          }, 
+        
+          {
+            id: "108016-pipestem-west-virginia",
+            title: $('<textarea/>').html("Pipestem, West Virginia").val(),
+            start: "2010-09-23",
+            end: "2010-09-27",
+            url: "/event/108016-pipestem-west-virginia",
+            allDay: false
+          }, 
+        
+          {
+            id: "108015-washington-dc",
+            title: $('<textarea/>').html("Washington, DC").val(),
+            start: "2010-10-06",
+            end: "2010-10-11",
+            url: "/event/108015-washington-dc",
+            allDay: false
+          }, 
+        
+          {
+            id: "108014-frederick-maryland",
+            title: $('<textarea/>').html("Frederick, Maryland").val(),
+            start: "2010-09-29",
+            end: "2010-10-02",
+            url: "/event/108014-frederick-maryland",
+            allDay: false
+          }, 
+        
+          {
+            id: "108012-philadelphia-pennsylvania",
+            title: $('<textarea/>').html("Philadelphia, Pennsylvania").val(),
+            start: "2010-10-31",
+            end: "2010-11-06",
+            url: "/event/108012-philadelphia-pennsylvania",
+            allDay: false
+          }, 
+        
+          {
+            id: "108011-lancaster-pennsylvania",
+            title: $('<textarea/>').html("Lancaster, Pennsylvania").val(),
+            start: "2010-10-26",
+            end: "2010-10-30",
+            url: "/event/108011-lancaster-pennsylvania",
+            allDay: false
+          }, 
+        
+          {
+            id: "108010-rutland-massachusetts",
+            title: $('<textarea/>').html("Rutland, Massachusetts").val(),
+            start: "2010-10-18",
+            end: "2010-10-20",
+            url: "/event/108010-rutland-massachusetts",
+            allDay: false
+          }, 
+        
+          {
+            id: "108009-monterey-massachusetts",
+            title: $('<textarea/>').html("Monterey, Massachusetts").val(),
+            start: "2010-10-21",
+            end: "2010-10-25",
+            url: "/event/108009-monterey-massachusetts",
+            allDay: false
+          }, 
+        
+          {
+            id: "108005-site-visits-in-cleveland-ohio",
+            title: $('<textarea/>').html("Site Visits in Cleveland, Ohio").val(),
+            start: "2010-09-13",
+            end: "2010-09-15",
+            url: "/event/108005-site-visits-in-cleveland-ohio",
+            allDay: false
+          }, 
+        
+          {
+            id: "108004-cleveland-ohio",
+            title: $('<textarea/>').html("Cleveland, Ohio").val(),
+            start: "2010-09-09",
+            end: "2010-09-10",
+            url: "/event/108004-cleveland-ohio",
+            allDay: false
+          }, 
+        
+          {
+            id: "107112-first-blog-post",
+            title: $('<textarea/>').html("First Blog Post").val(),
+            start: "",
+            end: "",
+            url: "/event/107112-first-blog-post",
+            allDay: false
+          }
+        
+      ]
+    });
+  });
+</script>
+  <!-- page-specific javascript -->
+  </head> 
+  <body> 
+   <div id="outer_wrapper"> 
+    <div id='wrapper'>
+      <div class='container'>
+      <!--  <div class="top-hz-bar"><div>&nbsp;</div></div>
+ */ -->
+      <div id='header' class='clearfix prepend-1 append-1'>
+  <div class='clearfix'>
+    <div id='logo-name'>
+      <a href='../index.html'>
+        <!-- note: /webvanta is a shared file area that you can can access but not modify; change this path to point to your logo -->
+        <h2>Twin Maps</h2>
+      </a>
+    </div>
+    <div id='topLinks'>
+      <ul>
+        <li><a href="../feed.xml.rss"
+          class='icon'><img src="../webvanta/themes/master/1.0/images/feed.gif" alt='RSS Feed' /></a></li>        
+      </ul>    
+    </div>
+  </div>
+  
+    <div id='linkContainer'>
+      <ul class="sf-menu sf-shadow" id='nav'>
+          
+            <li><a href='../index.html' >Home</a>
+            
+           </li>
+         
+            <li><a href='../bp/blog.html' >Blog</a>
+            
+           </li>
+         
+            <li><a href='../multimedia.html' >Media</a>
+            
+           </li>
+         
+            <li><a href='../about.html' >About</a>
+            
+           </li>
+         
+            <li><a href='index.html' >Calendar</a>
+            
+           </li>
+         
+            <li><a href='../Sites.html' >Sites</a>
+            
+           </li>
+         
+            <li><a href='../contact.html' >Contact</a>
+            
+           </li>
+         
+        </ul>
+    </div>
+  
+</div>
+   <!--  header snippet provides visual header and top navigation -->
+ <!--    <img width="950" height="156" alt="" src="/images/img07.jpg" /> -->
+      <div id='earth'> <!-- class='clearfix' -->
+        <div id='content_area'  class='clearfix'> 
+         
+        <div class='span-14 prepend-1 append-1'>  
+              <!-- begin code region 'pod_343584' -->
+<div class=' wv-code-region-pod_343584'>
+<div class="clearfix" id="calendar">&nbsp;</div>
+<!-- fullcalendar JS will display the calendar in this div --></div>
+<!-- end code region pod_343584 -->    <!--  content for main column goes here -->
+           </div>
+           <div class="span-6  append-2 last item_box">
+             <!-- begin code region 'pod_343588' -->
+<div class=' wv-code-region-pod_343588'><h3>Upcoming  Events</h3>
+<hr>
+<div class="event-list">     
+  
+</div></div>
+<!-- end code region pod_343588 -->     <!--  content for sidebar goes here -->
+          </div>
+          </div> <!--eaarth-->
+         </div><!--content area-->
+        </div><!--container-->
+       <div style="clear:both;"></div>
+<div id='footer_container' class="clearfix prepend-1 append-1">
+<div id="footer">
+  <ul>
+    <li>&copy; Copyright 2010, Brooke and Sons Web Builders, LLC</li>
+    <li><a href='../privacy.html'>Privacy</a></li>
+    <li class="last">Created with <a href='http://www.webvanta.com'>Webvanta CMS for Designers</a></li>
+    <li class="last">, <a href='http://www.freecsstemplates.org/'>FreeCSSTemplates</a></li>
+    <li class="last">, <a href='http://www.backspace.com/mapapp/'>DIYMaps</a></li>
+     <li class="last">United Church of Christ <a href='http://www.ucc.org/volunteer/'>UCC Volunteer Ministries</a></li>
+    
+    
+  </ul>
+</div>
+</div>
+   <!-- footer  snippet provides visual footer -->
+        
+      
+   </div><!--wrapper-->
+  
+ </div><!--outer wrapper-->
+    
+  <div id="webvanta-features" class="wvif">
+  <script type="text/javascript" src="../admin/v2/js/webvanta-bootstrap-2.0.0.js"></script>
+</div></body>
+</html>
